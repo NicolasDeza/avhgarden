@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="w-full bg-white py-16 md:py-24" aria-label="Nos services">
+  <section class="w-full bg-white pt-16 md:pt-24 pb-8 md:pb-12" aria-label="Nos services">
     <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
 
       <!-- Titre section -->
