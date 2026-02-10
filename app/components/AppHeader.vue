@@ -30,7 +30,7 @@ onUnmounted(() => {
 
 <template>
   <header
-    class="sticky top-0 z-50 w-full bg-primary-bg text-foreground border-b border-gray-200 transition-colors"
+    class="sticky top-0 z-50 w-full py-1 bg-primary-bg text-foreground border-b border-gray-200 transition-colors"
   >
     <nav
       class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
@@ -51,11 +51,11 @@ onUnmounted(() => {
 
       <!-- Navigation desktop -->
       <!-- Position: mx-auto (centré) | mr-auto ml-8 (collé au logo) | ml-auto mr-8 (collé à droite) -->
-      <ul class="hidden md:flex items-center gap-8 font-semibold">
+      <ul class="hidden md:flex items-center gap-8 font-semibold uppercase">
         <li>
           <NuxtLink
             to="/"
-            class="hover:text-gray-600 transition"
+            class="hover:text-primary transition"
           >
             Accueil
           </NuxtLink>
@@ -65,7 +65,7 @@ onUnmounted(() => {
         <li>
           <NuxtLink
             to="/contact"
-            class="hover:text-gray-600 transition"
+            class="hover:text-primary transition"
           >
             Contact
           </NuxtLink>
@@ -77,7 +77,7 @@ onUnmounted(() => {
         <!-- CTA desktop -->
         <NuxtLink
           to="/contact"
-          class="hidden sm:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary-hover transition"
+          class="hidden sm:inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white hover:scale-105 hover:bg-primary-hover transition"
         >
           Contact
         </NuxtLink>

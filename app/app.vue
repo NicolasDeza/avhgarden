@@ -14,7 +14,7 @@ router.afterEach(() => {
 
 <template>
   <NuxtLoadingIndicator
-    color="#00DC82"
+    color="#F36C32"
     :height="3"
     :duration="2500"
     :throttle="0"
