@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-
 // Menu mobile gestion état
 const isMenuOpen = ref(false);
 
@@ -12,8 +11,6 @@ const toggleMenu = () => {
 const closeMenu = () => {
   isMenuOpen.value = false;
 };
-
-
 
 // Fermer le menu avec la touche Escape (accessibilité)
 const handleKeydown = (event) => {
