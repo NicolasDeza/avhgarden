@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@nuxt/image": "^2.0.0",
-    "@nuxtjs/color-mode": "^4.0.0",
     "lucide-vue-next": "^0.562.0",
     "nodemailer": "^7.0.12",
     "nuxt": "^4.2.2",

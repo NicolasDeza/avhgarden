@@ -14,16 +14,4 @@
     /* Primary background */
     --primary-bg: 0 0% 100%; /* Blanc */
   }
-
-  .dark {
-    /* Texte */
-    --foreground: 0 0% 100%; /* Blanc */
-
-    /* Couleur de marque (même) */
-    --primary: 156 54% 53%;
-    --primary-hover: 156 54% 43%;
-
-    /* Primary background */
-    --primary-bg: 222 47% 11%; /* Bleu foncé #0F172B */
-  }
 }

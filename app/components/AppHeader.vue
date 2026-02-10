@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useColorMode } from "#imports";
+
 
 // Menu mobile gestion état
 const isMenuOpen = ref(false);
@@ -13,12 +13,7 @@ const closeMenu = () => {
   isMenuOpen.value = false;
 };
 
-// Color mode (dark/light)
-const colorMode = useColorMode();
 
-const toggleTheme = () => {
-  colorMode.preference = colorMode.preference === "dark" ? "light" : "dark";
-};
 
 // Fermer le menu avec la touche Escape (accessibilité)
 const handleKeydown = (event) => {
@@ -38,7 +33,7 @@ onUnmounted(() => {
 
 <template>
   <header
-    class="sticky top-0 z-50 w-full bg-primary-bg text-foreground border-b border-gray-200 dark:border-white/10 transition-colors"
+    class="sticky top-0 z-50 w-full bg-primary-bg text-foreground border-b border-gray-200 transition-colors"
   >
     <nav
       class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
@@ -51,19 +46,13 @@ onUnmounted(() => {
         aria-label="Retour à l'accueil"
         @click="closeMenu"
       >
-        <ClientOnly>
-          <NuxtImg
-            :src="
-              colorMode.preference === 'dark'
-                ? '/images/logo/logo-dark-nuxt.svg'
-                : '/images/logo/logo-light-nuxt.svg'
-            "
-            alt="Logo Nom du site"
-            class="h-7 w-auto"
-            loading="eager"
-            decoding="async"
-          />
-        </ClientOnly>
+        <NuxtImg
+          src="/images/logo/logo-light-nuxt.svg"
+          alt="Logo Nom du site"
+          class="h-7 w-auto"
+          loading="eager"
+          decoding="async"
+        />
       </NuxtLink>
 
       <!-- Navigation desktop -->
@@ -72,7 +61,7 @@ onUnmounted(() => {
         <li>
           <NuxtLink
             to="/"
-            class="hover:text-gray-600 dark:hover:text-gray-300 transition"
+            class="hover:text-gray-600 transition"
           >
             Accueil
           </NuxtLink>
@@ -82,7 +71,7 @@ onUnmounted(() => {
         <li>
           <NuxtLink
             to="/contact"
-            class="hover:text-gray-600 dark:hover:text-gray-300 transition"
+            class="hover:text-gray-600 transition"
           >
             Contact
           </NuxtLink>
@@ -91,49 +80,6 @@ onUnmounted(() => {
 
       <!-- Actions -->
       <div class="flex items-center gap-3">
-        <!-- Toggle dark mode -->
-        <ClientOnly>
-          <button
-            type="button"
-            aria-label="Basculer le thème"
-            class="h-9 w-9 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center justify-center transition-colors"
-            @click="toggleTheme"
-          >
-            <!-- Soleil -->
-            <svg
-              v-if="colorMode.preference === 'light'"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-700"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 1v3m0 16v3M4.22 4.22l2.12 2.12m11.32 11.32 2.12 2.12M1 12h3m16 0h3M6.34 19.78l-2.12 2.12M19.78 4.22l-2.12 2.12" />
-            </svg>
-
-            <!-- Lune -->
-            <svg
-              v-else
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-gray-300"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"
-              />
-            </svg>
-          </button>
-        </ClientOnly>
-
         <!-- CTA desktop -->
         <NuxtLink
           to="/contact"
@@ -145,7 +91,7 @@ onUnmounted(() => {
         <!-- Hamburger mobile -->
         <button
           type="button"
-          class="md:hidden h-9 w-9 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center justify-center transition-colors"
+          class="md:hidden h-9 w-9 rounded-md hover:bg-gray-100 flex items-center justify-center transition-colors"
           :aria-label="isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
           :aria-expanded="isMenuOpen"
           aria-controls="mobile-menu"
@@ -154,7 +100,7 @@ onUnmounted(() => {
           <svg
             v-if="!isMenuOpen"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-gray-700 dark:text-gray-300"
+            class="h-5 w-5 text-gray-700"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -171,7 +117,7 @@ onUnmounted(() => {
           <svg
             v-else
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-gray-700 dark:text-gray-300"
+            class="h-5 w-5 text-gray-700"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -200,7 +146,7 @@ onUnmounted(() => {
       <div
         v-if="isMenuOpen"
         id="mobile-menu"
-        class="absolute top-16 left-0 right-0 md:hidden bg-primary-bg border-t border-gray-200 dark:border-white/10 shadow-lg"
+        class="absolute top-16 left-0 right-0 md:hidden bg-primary-bg border-t border-gray-200 shadow-lg"
         role="region"
         aria-label="Menu de navigation mobile"
       >

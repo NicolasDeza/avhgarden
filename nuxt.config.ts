@@ -5,18 +5,12 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/color-mode", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/sitemap"],
 
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || "https://nuxt-starter-vitrine.vercel.app",
-  },
-
-  // Dark mode
-  colorMode: {
-    preference: "light",
-    fallback: "light",
-    classSuffix: "",
-    storageKey: "color-mode",
+    url:
+      process.env.NUXT_PUBLIC_SITE_URL ||
+      "https://nuxt-starter-vitrine.vercel.app",
   },
 
   // Runtime config (server + public)
