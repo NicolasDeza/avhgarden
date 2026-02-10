@@ -37,20 +37,17 @@ onUnmounted(() => {
       aria-label="Navigation principale"
     >
       <!-- Logo -->
-      <NuxtLink
-        to="/"
-        class="flex items-center gap-2"
-        aria-label="Retour à l'accueil"
-        @click="closeMenu"
-      >
-        <NuxtImg
-          src="/images/logo/logo-light-nuxt.svg"
-          alt="Logo Nom du site"
-          class="h-7 w-auto"
-          loading="eager"
-          decoding="async"
-        />
-      </NuxtLink>
+      <h1>
+        <NuxtLink
+          to="/"
+          class="text-2xl font-bold"
+          aria-label="Retour à l'accueil"
+          @click="closeMenu"
+        >
+          <span class="text-primary">AVH</span>
+          <span class="text-foreground"> Garden</span>
+        </NuxtLink>
+      </h1>
 
       <!-- Navigation desktop -->
       <!-- Position: mx-auto (centré) | mr-auto ml-8 (collé au logo) | ml-auto mr-8 (collé à droite) -->

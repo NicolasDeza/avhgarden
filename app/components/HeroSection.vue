@@ -2,18 +2,29 @@
 
 <template>
   <section
-    class="w-full bg-[#0F172B] py-20 md:py-40 lg:py-[215px]"
+    class="relative w-full py-20 md:py-40 lg:py-[215px]"
     aria-label="Section d'accueil"
   >
+    <!-- Image de fond -->
+    <NuxtImg
+      src="/images/hero/hero.jpg"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    
+    <!-- Overlay sombre -->
+    <div class="absolute inset-0 bg-black/50"/>
+
     <!-- Wrapper 1440px pour le contenu -->
     <div
-      class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6"
+      class="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6"
     >
       <!-- Titre principal -->
       <h1
-        class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white"
+        class="text-5xl sm:text-6xl lg:text-6xl font-bold tracking-tight text-white"
       >
-        Nuxt JS Starter Template
+        Rénovation - Transformation - Aménagement
       </h1>
 
       <!-- Sous-titre -->
