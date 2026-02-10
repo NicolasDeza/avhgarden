@@ -4,7 +4,7 @@ import { Drill } from "lucide-vue-next"
 
 <template>
   <section
-    class="relative w-full py-10 md:py-40 lg:py-[205px]"
+    class="relative w-full py-10 md:py-40 lg:py-[200px]"
     aria-label="Section d'accueil"
   >
     <!-- Image de fond -->
@@ -16,7 +16,7 @@ import { Drill } from "lucide-vue-next"
     />
 
     <!-- Overlay sombre -->
-    <div class="absolute inset-0 bg-black/55" />
+    <div class="absolute inset-0 bg-black/50" />
 
     <!-- Wrapper 1440px pour le contenu -->
     <div

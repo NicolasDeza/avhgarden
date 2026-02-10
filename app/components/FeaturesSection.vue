@@ -1,79 +1,55 @@
 <script setup>
 import {
-  ShieldCheck,
-  SunMoon,
-  Image,
-  LayoutGrid,
-  Code,
-  TrendingUp,
+  Clock,
+  Users,
+  Heart,
 } from "lucide-vue-next";
 
 const features = [
   {
-    title: "Qualité de code intégrée (EsLint)",
+    title: "Notre Histoire",
     description:
-      "ESLint est intégré comme module Nuxt afin de garantir des bonnes pratiques strictes et un code fiable dès le départ.",
-    icon: ShieldCheck,
+      "Plus de 15 ans d'expérience dans la construction et la rénovation. Notre expertise s'est construite sur des centaines de projets réalisés.",
+    icon: Clock,
   },
   {
-    title: "Mode sombre intégré",
+    title: "Notre Équipe",
     description:
-      "Gestion native du mode clair et sombre grâce à Nuxt Color Mode et des variables CSS, pour une expérience facilement personnalisable.",
-    icon: SunMoon,
+      "Une équipe passionnée d'experts qualifiés, architectes, ingénieurs et artisans dédiés à l'excellence de chaque projet.",
+    icon: Users,
+    dark: true,
   },
   {
-    title: "Images optimisées Nuxt Image",
+    title: "Nos Valeurs",
     description:
-      "Nuxt Image est préconfiguré pour fournir des images responsives, performantes et optimisées pour le référencement.",
-    icon: Image,
-  },
-  {
-    title: "Tailwind CSS prêt à l’emploi",
-    description:
-      "Tailwind CSS est configuré avec une base propre et évolutive pour créer rapidement des interfaces modernes et cohérentes.",
-    icon: LayoutGrid,
-  },
-  {
-    title: "Expérience développeur",
-    description:
-      "Imports automatiques, rechargement à chaud et une excellente expérience de développement dès la première configuration.",
-    icon: Code,
-  },
-  {
-    title: "Conçu pour évoluer",
-    description:
-      "Une architecture pensée pour évoluer avec votre projet, intégrant le SEO, la gestion des erreurs et les bonnes pratiques de sécurité.",
-    icon: TrendingUp,
+      "Qualité, transparence, respect des délais et satisfaction client sont au cœur de notre démarche quotidienne.",
+    icon: Heart,
   },
 ];
 </script>
 
 <template>
-  <section class="w-full bg-primary-bg py-24" aria-label="Fonctionnalités">
-    <div class="mx-auto max-w-7xl px-6">
+  <section class="w-full bg-gray-50 py-20" aria-label="Pourquoi nous choisir">
+    <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
       <!-- Titre -->
-      <header class="mx-auto max-w-3xl text-center">
-        <h2
-          class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
-        >
-          Tout ce dont vous avez besoin pour créer des applications Nuxt
-          modernes
+      <header class="mx-auto max-w-3xl text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          AVH Garden, Votre expertise
         </h2>
-
-        <p class="mt-4 text-foreground/70 font-medium">
-          Commencez par des bases solides. Ce modèle inclut tous les éléments
-          essentiels pour créer des applications prêtes pour la production.
+        <p class="text-gray-600 text-lg md:text-xl">
+          Découvrez notre expertise et notre engagement pour réaliser vos projets de rêve
         </p>
       </header>
 
       <!-- Grille -->
-      <div class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <FeatureItem
           v-for="feature in features"
           :key="feature.title"
           :title="feature.title"
           :description="feature.description"
           :icon="feature.icon"
+          :dark="feature.dark"
         />
       </div>
     </div>

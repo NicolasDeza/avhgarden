@@ -1,4 +1,6 @@
 <script setup>
+import ServicesSection from '~/components/ServicesSection.vue';
+
 const canonical = useCanonical();
 
 useHead(() => ({
@@ -38,7 +40,8 @@ useSeoMeta({
 <template>
   <div>
     <HeroSection />
-    <WelcomeSection/>
+    <WelcomeSection/>    
+    <ServicesSection/>
     <FeaturesSection />
   </div>
 </template>
