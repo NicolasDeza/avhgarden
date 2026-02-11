@@ -1,7 +1,7 @@
 <template>
-  <section class="w-full bg-white py-20" aria-label="Appel à l'action">
-    <div class="mx-auto px-6">
-      <div class="relative overflow-hidden bg-gradient-to-tr from-primary to-orange-400 rounded-[2rem] px-8 py-16 text-center shadow-2xl shadow-orange-900/20">
+  <section class="w-full bg-white" aria-label="Appel à l'action">
+    <div class="mx-auto">
+      <div class="relative overflow-hidden bg-gradient-to-tr from-primary to-orange-400  px-8 py-10  sm:py-12 text-center shadow-2xl shadow-orange-900/20">
         
         <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-white/10 blur-3xl"/>
         <div class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-black/10 blur-3xl"/>
@@ -21,7 +21,6 @@
               class="group inline-flex items-center gap-3 rounded-xl bg-white px-8 py-4 text-lg font-bold text-orange-600 transition-all hover:scale-105 hover:shadow-xl active:scale-95"
             >
               Demander mon devis gratuit
-              <span class="transition-transform group-hover:translate-x-1">→</span>
             </NuxtLink>
           </div>
         </div>

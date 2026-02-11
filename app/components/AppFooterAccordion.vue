@@ -14,7 +14,7 @@ const toggleSection = (section) => {
 
 <template>
   <footer
-    class="w-full border-t border-foreground/20 bg-primary-bg"
+    class="w-full border-t border-white/20 bg-[#1A1A1A]"
     aria-label="Pied de page"
   >
     <div class="mx-auto max-w-6xl px-6 pt-12 pb-4 md:pb-6">
@@ -22,11 +22,11 @@ const toggleSection = (section) => {
       <div class="grid gap-8 md:grid-cols-3">
         <!-- Colonne 1 : Branding (toujours visible) -->
         <div class="text-center md:text-left pb-6">
-          <h2 class="text-xl font-semibold text-foreground">
+          <h2 class="text-xl font-semibold text-white">
             Nuxt Starter Vitrine
           </h2>
           <p
-            class="mt-2 text-sm text-foreground/60 mx-auto md:mx-0 max-w-[220px]"
+            class="mt-2 text-sm text-white/60 mx-auto md:mx-0 max-w-[220px]"
           >
             Une base moderne et performante pour créer des sites Nuxt prêts pour
             la production.
@@ -38,7 +38,7 @@ const toggleSection = (section) => {
           <!-- Titre avec bouton toggle (mobile uniquement) -->
           <button
             type="button"
-            class="flex w-full items-center justify-between text-sm font-semibold text-foreground md:cursor-default md:pointer-events-none"
+            class="flex w-full items-center justify-between text-sm font-semibold text-white md:cursor-default md:pointer-events-none"
             :aria-expanded="openSections.navigation"
             aria-controls="nav-links"
             @click="toggleSection('navigation')"
@@ -84,7 +84,7 @@ const toggleSection = (section) => {
               <li>
                 <NuxtLink
                   to="/"
-                  class="text-foreground/60 hover:text-foreground transition"
+                  class="text-white/60 hover:text-white transition"
                 >
                   Accueil
                 </NuxtLink>
@@ -93,7 +93,7 @@ const toggleSection = (section) => {
               <li>
                 <NuxtLink
                   to="/contact"
-                  class="text-foreground/60 hover:text-foreground transition"
+                  class="text-white/60 hover:text-white transition"
                 >
                   Contact
                 </NuxtLink>
@@ -107,7 +107,7 @@ const toggleSection = (section) => {
           <!-- Titre avec bouton toggle (mobile uniquement) -->
           <button
             type="button"
-            class="flex w-full items-center justify-between text-sm font-semibold text-foreground md:cursor-default md:pointer-events-none"
+            class="flex w-full items-center justify-between text-sm font-semibold text-white md:cursor-default md:pointer-events-none"
             :aria-expanded="openSections.resources"
             aria-controls="resource-links"
             @click="toggleSection('resources')"
@@ -155,7 +155,7 @@ const toggleSection = (section) => {
                   to="https://github.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-foreground/60 hover:text-foreground transition"
+                  class="text-white/60 hover:text-white transition"
                   aria-label="GitHub (ouvre dans un nouvel onglet)"
                 >
                   GitHub
@@ -164,7 +164,7 @@ const toggleSection = (section) => {
               <li>
                 <NuxtLink
                   to="/legal/mentions-legales"
-                  class="text-foreground/60 hover:text-foreground transition"
+                  class="text-white/60 hover:text-white transition"
                 >
                   Mentions légales
                 </NuxtLink>
@@ -176,7 +176,7 @@ const toggleSection = (section) => {
 
       <!-- Bas de footer -->
       <div
-        class="mt-10 border-t border-foreground/20 pt-6 text-center text-sm text-foreground/50"
+        class="mt-10 border-t border-white/20 pt-6 text-center text-sm text-white/50"
       >
         <p>© {{ year }} Nuxt Starter Vitrine. Tous droits réservés.</p>
         <p class="mt-2">
@@ -185,7 +185,7 @@ const toggleSection = (section) => {
             to="https://nicolasdeza.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-foreground/70 hover:text-foreground transition underline"
+            class="text-white/70 hover:text-white transition underline"
             aria-label="Nicolas Deza (ouvre dans un nouvel onglet)"
           >
             Nicolas Deza

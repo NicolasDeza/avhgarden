@@ -1,44 +1,45 @@
 <script setup>
 import {
-  Clock,
-  Users,
-  Heart,
+  Shield,
+  Award,
+  ThumbsUp,
 } from "lucide-vue-next";
 
 const features = [
   {
-    title: "Notre Histoire",
+    title: "Garantie & Assurances",
     description:
-      "Plus de 15 ans d'expérience dans la construction et la rénovation. Notre expertise s'est construite sur des centaines de projets réalisés.",
-    icon: Clock,
+      "Tous nos travaux sont garantis et couverts par nos assurances professionnelles. Votre tranquillité d'esprit est notre priorité.",
+    icon: Shield,
   },
   {
-    title: "Notre Équipe",
+    title: "Qualité Certifiée",
     description:
-      "Une équipe passionnée d'experts qualifiés, architectes, ingénieurs et artisans dédiés à l'excellence de chaque projet.",
-    icon: Users,
+      "Matériaux premium, techniques éprouvées et finitions impeccables. Chaque chantier respecte les normes les plus strictes du secteur.",
+    icon: Award,
   },
   {
-    title: "Nos Valeurs",
+    title: "100% Satisfaction",
     description:
-      "Qualité, transparence, respect des délais et satisfaction client sont au cœur de notre démarche quotidienne.",
-    icon: Heart,
+      "Écoute, réactivité et respect des délais. Notre succès repose sur la satisfaction de nos clients et leur confiance renouvelée.",
+    icon: ThumbsUp,
   },
 ];
 </script>
 
 <template>
-  <section class="w-full bg-white pb-16 md:pb-24 pt-8 md:pt-12" aria-label="Pourquoi nous choisir">
+  <section class="w-full bg-[#f8f9fa] py-16 sm:py-24 " aria-label="Pourquoi nous choisir">
     <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
       <!-- Titre -->
-      <header class="mx-auto max-w-3xl text-center mb-14">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-          AVH Garden, Votre expertise
-        </h2>
-        <p class="text-gray-600 text-lg md:text-xl">
-          Découvrez notre expertise et notre engagement pour réaliser vos projets de rêve
-        </p>
-      </header>
+      <header class="mx-auto max-w-3xl text-center mb-20">
+  <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tighter">
+    AVH Garden,l'expertise
+  </h2>
+  <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"/>
+  <p class="text-gray-600 text-lg md:text-xl font-medium">
+    Découvrez notre engagement pour réaliser vos projets de rêve.
+  </p>
+</header>
 
       <!-- Grille -->
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">

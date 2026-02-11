@@ -19,7 +19,10 @@ import {
         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tighter">
           Tous vos travaux, intérieurs et extérieurs
         </h2>
-        <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"/>
+        <div class="w-20 h-1.5 bg-primary mx-auto rounded-full mb-6"/>
+        <p class="text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+          Du pavage aux rénovations complètes, nous réalisons vos projets avec expertise et savoir-faire.
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
@@ -90,6 +93,17 @@ import {
           </ul>
         </div>
 
+      </div>
+
+      <div class="mt-16 text-center">
+        <NuxtLink
+          to="/contact"
+          class="inline-flex items-center justify-center px-10 py-4 bg-primary hover:bg-primary-hover text-white font-bold rounded-lg
+                 transition-all duration-300 transform hover:scale-105 shadow-lg
+                 focus:outline-none focus:ring-4 focus:ring-primary/30"
+        >
+          Demander un devis gratuit
+        </NuxtLink>
       </div>
     </div>
   </section>
