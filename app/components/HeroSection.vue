@@ -12,7 +12,7 @@
       aria-hidden="true"
     />
 
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" aria-hidden="true" />
+    <div class="absolute inset-0 bg-black/40" aria-hidden="true" />
 
     <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
     

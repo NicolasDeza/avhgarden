@@ -23,7 +23,7 @@
       <NuxtLink
         to="/realisations"
         class="group relative inline-flex items-center justify-center
-               bg-primary text-white font-bold uppercase tracking-wider
+               bg-primary hover:bg-primary-hover hover:scale-105 text-white font-bold uppercase tracking-wider
                px-10 py-5 rounded-lg transition-all duration-300
               "
       >
