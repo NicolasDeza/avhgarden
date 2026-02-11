@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full bg-orange-500 py-12 md:py-16"
+    class="w-full bg-primary py-12 md:py-16"
     aria-label="Appel à l'action"
   >
     <div class="mx-auto max-w-7xl px-6">

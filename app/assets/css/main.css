@@ -8,8 +8,8 @@
     --foreground: 0 0% 9%; /* Noir */
 
     /* Couleur de marque */
-    --primary: 18 89% 57%; /* #f36c32 Orange */
-    --primary-hover: 18 89% 48%;
+    --primary: 18 89% 58%; /* #FF6B35 Orange vif */
+    --primary-hover: 18 100% 52%;
 
     /* Primary background */
     --primary-bg: 0 0% 100%; /* Blanc */

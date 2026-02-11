@@ -1,54 +1,36 @@
-<script setup>
-// Section purement présentation – aucune logique nécessaire
-</script>
-
 <template>
-  <section class="w-full bg-[#252424] text-white" aria-label="Présentation de l'entreprise">
-    <div
-      class="mx-auto max-w-[1440px]
-             px-6 py-16 md:py-24
-             flex flex-col items-center text-center"
-    >
-      <!-- Eyebrow -->
-      <span
-        class="text-primary text-xl sm:text-3xl font-bold  uppercase mb-3"
-      >
+  <section class="w-full bg-[#1A1A1A] text-white overflow-hidden" aria-label="Présentation">
+    <div class="mx-auto max-w-7xl px-6 py-16 md:py-24 flex flex-col items-center text-center">
+      
+
+      <span class="text-primary text-sm md:text-base font-black uppercase tracking-[0.2em] mb-4">
         Bienvenue chez
       </span>
 
-      <!-- Titre -->
-      <h2 class="text-2xl sm:text-3xl font-bold mb-6">
-        AVH Garden
+      <h2 class="text-4xl md:text-5xl font-black mb-10 tracking-tighter">
+        AVH <span class="text-primary">Garden</span>
       </h2>
 
-      <!-- Texte principal -->
-      <p
-        class="text-xl sm:text-3xl font-semibold leading-relaxed max-w-6xl mb-6 mt-3"
-      >
-        Rénovations intérieures, extérieures et aménagements réalisés avec
-        savoir-faire
+      <p class="text-2xl md:text-4xl font-semibold leading-[1.2] max-w-4xl mb-8">
+        Rénovations <span class="text-white/50 italic">intérieures</span>, 
+        extérieures et aménagements réalisés avec savoir-faire
       </p>
 
-      <!-- Description -->
-      <p
-        class="text-white/90 text-lg sm:text-xl max-w-5xl mb-10"
-      >
-        Découvrez nos chantiers : pavage, carrelage, salle de bain,
-        aménagements intérieurs et travaux extérieurs
+      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+        Du pavage à la salle de bain, nous transformons vos projets en espaces durables et soignés.
       </p>
 
-      <!-- CTA -->
       <NuxtLink
         to="/realisations"
-        class="inline-flex items-center justify-center
-               bg-primary hover:bg-primary-hover
-               text-white hover:scale-105 uppercase font-bold
-               px-8 py-4 rounded-md
-               transition
-               focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        class="group relative inline-flex items-center justify-center
+               bg-primary text-white font-bold uppercase tracking-wider
+               px-10 py-5 rounded-lg transition-all duration-300
+              "
       >
         Voir nos réalisations
+        <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
       </NuxtLink>
+      
     </div>
   </section>
 </template>

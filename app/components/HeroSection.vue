@@ -1,62 +1,62 @@
-<script setup>
-import { Drill } from "lucide-vue-next"
-</script>
-
 <template>
-  <section
-    class="relative w-full py-10 md:py-40 lg:py-[200px]"
-    aria-label="Section d'accueil"
+  <section 
+    class="relative w-full py-10 sm:py-[170px] flex items-center justify-center overflow-hidden"
+    aria-label="Section d'accueil - Présentation des services de rénovation"
   >
-    <!-- Image de fond -->
     <NuxtImg
       src="/images/hero/hero.jpg"
       alt=""
-      class="absolute inset-0 w-full h-full object-cover"
+      role="presentation"
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
       loading="eager"
+      aria-hidden="true"
     />
 
-    <!-- Overlay sombre -->
-    <div class="absolute inset-0 bg-black/50" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" aria-hidden="true" />
 
-    <!-- Wrapper 1440px pour le contenu -->
-    <div
-      class="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6"
-    >
-      <!-- Titre principal -->
-      <h1 class="text-4xl sm:text-6xl lg:text-6xl font-bold tracking-tight text-white">
-        Rénovation · Transformation · Aménagement
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+    
+
+      <h1 class="text-4xl md:text-7xl font-extrabold tracking-tighter text-white mb-8 leading-tight">
+        Rénovez votre espace <br> 
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+          avec excellence
+        </span>
       </h1>
 
-      <!-- Glass card (GROUP) -->
-      <div
-        class="group mt-8 max-w-3xl
-               backdrop-blur-sm
-               bg-white/5 has-[a:hover]:bg-white/10
-               border border-white/15
-               rounded-2xl
-               px-8 py-8
-               shadow-2xl
-               transition-colors duration-500"
-      >
-        <!-- Sous-titre -->
-        <p class="text-xl sm:text-2xl text-white font-semibold mb-6">
-          Travaux <span class="text-primary font-bold">intérieurs</span> et
-          <span class="text-primary font-bold">extérieurs</span> sur mesure,
-          pour rénover et transformer vos espaces
+      <div class="max-w-2xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl">
+        <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
+          Travaux <strong class="text-white">intérieurs</strong> et 
+          <strong class="text-white">extérieurs</strong> sur mesure. Nous transformons vos idées en réalité durable.
         </p>
 
-        <!-- Action -->
-        <NuxtLink
-          to="/contact"
-          class="inline-flex items-center gap-2
-                 rounded-md
-                 bg-primary px-8 py-3 font-bold text-white
-                 hover:scale-105 hover:bg-primary-hover
-                 transition"
-        >
-          <Drill class="h-5 w-5" />
-          Nous contacter
-        </NuxtLink>
+        <nav class="flex flex-col sm:flex-row gap-4 justify-center" aria-label="Actions principales">
+  <NuxtLink 
+    to="/contact" 
+    class="group flex items-center justify-center gap-3 
+           bg-primary hover:bg-primary-hover 
+           text-white px-10 py-4 rounded-lg font-bold 
+           transition-all duration-300 transform hover:scale-105
+           shadow-lg shadow-primary/20
+           focus:outline-none focus:ring-4 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-black"
+    aria-label="Demander un devis gratuit - Accéder au formulaire de contact"
+  >
+    Mon devis gratuit
+  </NuxtLink>
+  
+  <NuxtLink 
+    to="/realisations" 
+    class="flex items-center justify-center 
+           bg-white/10 hover:bg-white/20 
+           text-white px-10 py-4 rounded-lg font-bold 
+           backdrop-blur-md border border-white/10
+           transition-all duration-300 transform hover:scale-105
+           focus:outline-none focus:ring-4 focus:ring-white focus:ring-offset-2 focus:ring-offset-black"
+    aria-label="Découvrir nos réalisations - Voir la galerie de projets"
+  >
+    Voir nos projets
+  </NuxtLink>
+</nav>
       </div>
     </div>
   </section>

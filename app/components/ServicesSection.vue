@@ -132,7 +132,7 @@
                 </li>
                 <li class="flex items-start gap-2 font-semibold">
                   <span class="text-primary font-bold mt-1">✓</span>
-                  <span>Petits travaux de plomberie</span>
+                  <span>Travaux de plomberie</span>
                 </li>
               </ul>
 

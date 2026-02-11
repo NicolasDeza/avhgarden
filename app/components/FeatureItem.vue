@@ -22,10 +22,10 @@ defineProps({
 
     <!-- Texte -->
     <div>
-      <h3 class="font-bold text-xl mb-3 text-white">
+      <h3 class="font-bold text-xl mb-3 text-white text-center">
         {{ title }}
       </h3>
-      <p class="leading-relaxed text-gray-300">
+      <p class="leading-relaxed text-gray-300 text-left">
         {{ description }}
       </p>
     </div>
