@@ -43,5 +43,6 @@ useSeoMeta({
     <WelcomeSection/>    
     <ServicesSection/>
     <FeaturesSection />
+    <SplitSection/>
   </div>
 </template>

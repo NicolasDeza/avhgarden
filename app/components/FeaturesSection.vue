@@ -28,12 +28,12 @@ const features = [
 </script>
 
 <template>
-  <section class="w-full bg-[#f8f9fa] py-16 sm:py-24 " aria-label="Pourquoi nous choisir">
+  <section class="w-full bg-white pb-16 sm:pb-24 " aria-label="Pourquoi nous choisir">
     <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
       <!-- Titre -->
       <header class="mx-auto max-w-3xl text-center mb-20">
   <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tighter">
-    AVH Garden,l'expertise
+    AVH Garden, l'expertise
   </h2>
   <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"/>
   <p class="text-gray-600 text-lg md:text-xl font-medium">
