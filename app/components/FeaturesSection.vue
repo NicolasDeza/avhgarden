@@ -28,7 +28,7 @@ const features = [
 </script>
 
 <template>
-  <section class="w-full bg-white pb-16 sm:pb-24 " aria-label="Pourquoi nous choisir">
+  <section class="w-full bg-slate-50 py-24 sm:py-24" aria-label="Pourquoi nous choisir">
     <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
       <!-- Titre -->
       <header class="mx-auto max-w-3xl text-center mb-20">

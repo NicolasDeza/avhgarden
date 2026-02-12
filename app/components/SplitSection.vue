@@ -31,7 +31,7 @@
           La qualité au service de votre <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">habitat.</span>
         </h2>
         
-        <p class="text-slate-400 text-lg leading-relaxed mb-10 font-light border-l-2 border-primary/30 pl-6">
+        <p class="text-slate-400 text-lg leading-relaxed mb-10 font-light ">
           Nous ne nous contentons pas de construire, nous façonnons des espaces de vie durables. Notre expertise certifiée est le gage d'une réalisation sans compromis.
         </p>
 
