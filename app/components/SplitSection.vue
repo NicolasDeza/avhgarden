@@ -30,7 +30,7 @@
 
         <NuxtLink 
           to="/realisations" 
-          class="inline-flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg
+          class="inline-flex items-center gap-3 bg-white text-primary px-8 py-3 rounded-xl font-bold text-lg
                  transition-all duration-300 transform hover:scale-105 hover:shadow-2xl
                  focus:outline-none focus:ring-4 focus:ring-white/50"
         >

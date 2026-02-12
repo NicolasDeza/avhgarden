@@ -24,11 +24,10 @@
         to="/realisations"
         class="group relative inline-flex items-center justify-center
                bg-primary hover:bg-primary-hover hover:scale-105 text-white font-bold uppercase tracking-wider
-               px-10 py-5 rounded-lg transition-all duration-300
+               px-10 py-4 rounded-lg transition-all duration-300
               "
       >
         Voir nos réalisations
-        <span class="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
       </NuxtLink>
       
     </div>
