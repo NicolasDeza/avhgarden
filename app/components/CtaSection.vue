@@ -7,7 +7,7 @@
         <div class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-black/10 blur-3xl"/>
 
         <div class="relative z-10">
-          <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-white">
+          <h2 class="text-3xl md:text-4xl font-black tracking-tighter text-white">
             Un projet de rénovation en tête ?
           </h2>
 

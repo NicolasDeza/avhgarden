@@ -19,14 +19,14 @@
         <!-- Card 1 -->
         <article class="group relative overflow-hidden rounded-2xl shadow-xl bg-white transition-all duration-300 hover:shadow-2xl">
           <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div class="relative aspect-[16/10] md:h-64 overflow-hidden">
               <NuxtImg 
-                src="/images/realisations/realisation-1.jpg" 
+                src="/images/realisations/terrasse.jpg" 
                 alt="Réalisation 1 - Aménagement extérieur"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
-            <div class="p-8 flex flex-col justify-center">
+            <div class="p-6 flex flex-col justify-center">
               <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4 w-fit">
                 Extérieur
               </span>
@@ -41,14 +41,14 @@
         <!-- Card 2 -->
         <article class="group relative overflow-hidden rounded-2xl shadow-xl bg-white transition-all duration-300 hover:shadow-2xl">
           <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div class="relative aspect-[16/10] md:h-64 overflow-hidden">
               <NuxtImg 
-                src="/images/realisations/realisation-2.jpg" 
+                src="/images/realisations/grenier.jpg" 
                 alt="Réalisation 2 - Rénovation intérieure"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
-            <div class="p-8 flex flex-col justify-center">
+            <div class="p-6 flex flex-col justify-center">
               <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4 w-fit">
                 Intérieur
               </span>
@@ -63,14 +63,14 @@
         <!-- Card 3 -->
         <article class="group relative overflow-hidden rounded-2xl shadow-xl bg-white transition-all duration-300 hover:shadow-2xl">
           <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative aspect-[4/3] md:aspect-auto overflow-hidden">
+            <div class="relative aspect-[16/10] md:h-64 overflow-hidden">
               <NuxtImg 
-                src="/images/realisations/realisation-3.jpg" 
+                src="/images/realisations/amenagement.jpg" 
                 alt="Réalisation 3 - Aménagement jardin"
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
-            <div class="p-8 flex flex-col justify-center">
+            <div class="p-6 flex flex-col justify-center">
               <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4 w-fit">
                 Jardin
               </span>

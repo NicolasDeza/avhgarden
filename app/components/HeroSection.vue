@@ -1,6 +1,6 @@
 <template>
   <section 
-    class="relative w-full py-10 sm:py-[170px] flex items-center justify-center overflow-hidden"
+    class="relative w-full py-10 sm:py-[150px] flex items-center justify-center overflow-hidden"
     aria-label="Section d'accueil - Présentation des services de rénovation"
   >
     <NuxtImg
@@ -27,7 +27,7 @@
       <div class="max-w-2xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl">
         <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
           Travaux <strong class="text-white">intérieurs</strong> et 
-          <strong class="text-white">extérieurs</strong> sur mesure. Nous transformons vos idées en réalité durable.
+          <strong class="text-white">extérieurs</strong> sur mesure. Avec <strong class="text-white">AVH Garden</strong>, vos idées deviennent une réalité durable.
         </p>
 
         <nav class="flex flex-col sm:flex-row gap-4 justify-center" aria-label="Actions principales">
