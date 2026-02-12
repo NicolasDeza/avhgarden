@@ -1,102 +1,69 @@
+<script setup>
+
+</script>
+
 <template>
-  <section class="w-full bg-white py-16 md:py-24" aria-label="Nos réalisations">
+  <section class="w-full bg-white py-16 sm:py-24" aria-label="Nos réalisations">
     <div class="mx-auto max-w-[1440px] px-6">
       
-      <!-- En-tête -->
       <div class="mb-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 tracking-tighter">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
           Nos Réalisations
         </h2>
-        <div class="w-20 h-1.5 bg-primary mx-auto rounded-full mb-6"/>
-        <p class="text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+        <div class="w-16 h-1 bg-primary mx-auto mb-6"/>
+        <p class="text-slate-600 text-lg max-w-2xl mx-auto">
           Découvrez quelques-uns de nos projets réalisés avec passion et expertise.
         </p>
       </div>
 
-      <!-- Grille de réalisations -->
-      <div class="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-4 h-auto md:h-[550px]">
         
-        <!-- Card 1 -->
-        <article class="group relative overflow-hidden rounded-2xl shadow-xl bg-white transition-all duration-300 hover:shadow-2xl">
-          <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative aspect-[16/10] md:h-64 overflow-hidden">
-              <NuxtImg 
-                src="/images/realisations/terrasse.jpg" 
-                alt="Réalisation 1 - Aménagement extérieur"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-            </div>
-            <div class="p-6 flex flex-col justify-center">
-              <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4 w-fit">
-                Extérieur
-              </span>
-              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Aménagement Extérieur</h3>
-              <p class="text-gray-600 text-lg">
-                Pavage complet, terrassement et création d'une allée moderne. Un projet qui allie esthétique et fonctionnalité.
-              </p>
-            </div>
+        <article class="md:col-span-7 md:row-span-2 group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm border border-slate-100">
+          <NuxtImg 
+            src="/images/realisations/terrasse.jpg" 
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-8">
+        
+            <h3 class="text-white text-2xl font-bold">Pavage & Terrasse Moderne</h3>
           </div>
         </article>
 
-        <!-- Card 2 -->
-        <article class="group relative overflow-hidden rounded-2xl shadow-xl bg-white transition-all duration-300 hover:shadow-2xl">
-          <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative aspect-[16/10] md:h-64 overflow-hidden">
-              <NuxtImg 
-                src="/images/realisations/grenier.jpg" 
-                alt="Réalisation 2 - Rénovation intérieure"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-            </div>
-            <div class="p-6 flex flex-col justify-center">
-              <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4 w-fit">
-                Intérieur
-              </span>
-              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Rénovation Intérieure</h3>
-              <p class="text-gray-600 text-lg">
-                Transformation complète d'une salle de bain avec des matériaux haut de gamme et des finitions impeccables.
-              </p>
-            </div>
+        <article class="md:col-span-5 md:row-span-1 group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm border border-slate-100">
+          <NuxtImg 
+            src="/images/realisations/grenier.jpg" 
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-6">
+   
+            <h3 class="text-white text-xl font-bold">Rénovation de Combles</h3>
           </div>
         </article>
 
-        <!-- Card 3 -->
-        <article class="group relative overflow-hidden rounded-2xl shadow-xl bg-white transition-all duration-300 hover:shadow-2xl">
-          <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative aspect-[16/10] md:h-64 overflow-hidden">
-              <NuxtImg 
-                src="/images/realisations/amenagement.jpg" 
-                alt="Réalisation 3 - Aménagement jardin"
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-            </div>
-            <div class="p-6 flex flex-col justify-center">
-              <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4 w-fit">
-                Jardin
-              </span>
-              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Jardin & Clôture</h3>
-              <p class="text-gray-600 text-lg">
-                Création d'un espace extérieur harmonieux avec clôture, plantation et éclairage paysager.
-              </p>
-            </div>
+        <article class="md:col-span-5 md:row-span-1 group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm border border-slate-100">
+          <NuxtImg 
+            src="/images/realisations/amenagement.jpg" 
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-6">
+ 
+            <h3 class="text-white text-xl font-bold">Espace Paysager</h3>
           </div>
         </article>
 
       </div>
 
-      <!-- CTA -->
       <div class="mt-12 text-center">
-        <NuxtLink
-          to="/realisations"
-          class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary hover:bg-primary-hover text-white font-bold rounded-xl
-                 transition-all duration-300 transform hover:scale-105 shadow-lg
-                 focus:outline-none focus:ring-4 focus:ring-primary/30"
+        <NuxtLink 
+          to="/realisations" 
+          class="inline-block bg-primary hover:bg-primary-hover hover:scale-105 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
         >
-          Voir toutes nos réalisations
-
+          Découvrir toutes nos réalisations
         </NuxtLink>
       </div>
 
     </div>
   </section>
 </template>
+
+

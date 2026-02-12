@@ -3,47 +3,59 @@
 </script>
 
 <template>
-  <section class="w-full min-h-[480px] grid grid-cols-1 lg:grid-cols-2 overflow-hidden" aria-label="Présentation">
+  <section class="w-full min-h-[500px] grid grid-cols-1 lg:grid-cols-2 bg-[#1E1E1E]" aria-label="Présentation">
     
-    <div class="relative h-[320px] lg:h-auto overflow-hidden">
+    <div class="relative h-[400px] lg:h-auto overflow-hidden group">
       <NuxtImg 
         src="/images/split/section-1.jpg" 
-        alt="Notre expertise en action"
-        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+        alt="Artisan BTP en action"
+        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
       />
-      <div class="absolute inset-0 bg-black/10"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1E1E1E] via-transparent to-transparent hidden lg:block w-1/3"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#1E1E1E] via-transparent to-transparent lg:hidden h-1/2 bottom-0"/>
+      
     </div>
 
-    <div class="bg-primary flex items-center justify-center p-12 sm:p-16 lg:p-20">
-      <div class="max-w-xl">
-        <span class="inline-block px-4 py-1 rounded-full bg-white/20 text-white text-sm font-bold uppercase tracking-widest mb-6">
-          TVA : 0776.249.824 actif depuis 1997
-        </span>
+    <div class="relative flex items-center justify-center p-10 sm:p-16">
+      <div class="relative z-10 max-w-xl w-full">
         
-        <h2 class="text-4xl sm:text-5xl font-black text-white leading-[1.1] tracking-tighter mb-8">
-          La qualité au service de votre habitat.
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"/>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"/>
+          </span>
+          <span class="text-primary font-bold text-[10px] uppercase tracking-widest">TVA 0776.249.824  actif depuis 1997</span>
+        </div>
+        
+        <h2 class="text-4xl sm:text-4xl font-black text-white leading-[1.05] tracking-tighter mb-8">
+          La qualité au service de votre <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">habitat.</span>
         </h2>
         
-        <p class="text-orange-50 text-lg md:text-xl leading-relaxed mb-10 opacity-90">
-          Nous ne nous contentons pas de construire, nous créons des espaces de vie qui vous ressemblent. Chaque détail est pensé pour durer et sublimer votre quotidien.
+        <p class="text-slate-400 text-lg leading-relaxed mb-10 font-light border-l-2 border-primary/30 pl-6">
+          Nous ne nous contentons pas de construire, nous façonnons des espaces de vie durables. Notre expertise certifiée est le gage d'une réalisation sans compromis.
         </p>
 
-        <NuxtLink 
-          to="/realisations" 
-          class="inline-flex items-center gap-3 bg-white text-primary px-8 py-3 rounded-xl font-bold text-lg
-                 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl
-                 focus:outline-none focus:ring-4 focus:ring-white/50"
-        >
-          Voir nos travaux
-         
-        </NuxtLink>
+        <div class="grid grid-cols-2 gap-8  border-t border-white/5 pt-10">
+       
+
+        <div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
+          <NuxtLink 
+            to="/realisations" 
+            class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-bold text-md transition-all hover:scale-105"
+          >
+            Voir nos travaux
+          </NuxtLink>
+          
+        </div>
       </div>
+
     </div>
+  </div>
   </section>
 </template>
 
 <style scoped>
-/* Optionnel : ajout d'un grain de texture sur le orange pour le côté premium */
+
 .bg-gradient-to-br {
   position: relative;
 }

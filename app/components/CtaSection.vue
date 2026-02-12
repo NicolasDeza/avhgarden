@@ -1,7 +1,7 @@
 <template>
   <section class="w-full bg-white" aria-label="Appel à l'action">
     <div class="mx-auto">
-      <div class="relative overflow-hidden bg-gradient-to-tr from-primary to-orange-400  px-8 py-10  sm:py-12 text-center shadow-2xl shadow-orange-900/20">
+      <div class="relative overflow-hidden bg-primary  px-8 py-10  sm:py-12 text-center shadow-2xl shadow-orange-900/20">
         
         <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-white/10 blur-3xl"/>
         <div class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-black/10 blur-3xl"/>
@@ -11,7 +11,7 @@
             Un projet de rénovation en tête ?
           </h2>
 
-          <p class="mx-auto mt-6 max-w-xl text-lg text-orange-50 font-medium">
+          <p class="mx-auto mt-5 max-w-xl text-lg text-orange-50 font-medium">
             Confiez vos espaces à un expert. De la conception à la réalisation, nous donnons vie à vos idées.
           </p>
 
