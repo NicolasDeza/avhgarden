@@ -12,7 +12,7 @@ import {
 </script>
 
 <template>
-  <section class="w-full bg-white py-16 md:py-24" aria-label="Nos services">
+  <section id="services" class="w-full bg-white py-16 md:py-24" aria-label="Nos services">
     <div class="mx-auto max-w-[1440px] px-6">
       
       <div class="mb-20 text-center">

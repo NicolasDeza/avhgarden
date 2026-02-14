@@ -1,8 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-// Menu mobile gestion état
 const isMenuOpen = ref(false);
+const route = useRoute();
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
@@ -12,14 +12,27 @@ const closeMenu = () => {
   isMenuOpen.value = false;
 };
 
-// Gestion du scroll pour l'opacité du header
+// Vérifie si lien actif
+const isLinkActive = (to) => {
+  if (to.includes('#')) {
+    const [path, hash] = to.split('#');
+    return (
+      route.path === (path || '/') &&
+      route.hash === `#${hash}`
+    );
+  }
+
+  return route.path === to && !route.hash;
+};
+
+// Gestion opacité header
 const isScrolled = ref(false);
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 90;
 };
 
-// Fermer le menu avec la touche Escape (accessibilité)
+// Accessibilité Escape
 const handleKeydown = (event) => {
   if (event.key === "Escape" && isMenuOpen.value) {
     closeMenu();
@@ -29,7 +42,7 @@ const handleKeydown = (event) => {
 onMounted(() => {
   document.addEventListener("keydown", handleKeydown);
   window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Vérifier la position initiale
+  handleScroll();
 });
 
 onUnmounted(() => {
@@ -37,6 +50,7 @@ onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
 });
 </script>
+
 
 <template>
   <header
@@ -66,20 +80,30 @@ onUnmounted(() => {
 v-for="item in [
           { name: 'Accueil', to: '/' },
           { name: 'Réalisations', to: '/realisations' },
-          { name: 'Services', to: '/services' },
+          { name: 'Services', to: '/#services' },
           { name: 'Contact', to: '/contact' },
 
         ]" :key="item.to">
           <NuxtLink
   :to="item.to"
-  class="relative text-[14px] font-bold uppercase tracking-[0.2em] transition-all duration-300 px-4 py-2.5 rounded-full"
+  class="relative text-[14px] font-bold uppercase tracking-[0.2em] transition-all duration-300 px-4 py-2.5 group"
   :class="[
-    $route.path === item.to 
-      ? 'text-primary bg-primary/10' 
-      : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+    isLinkActive(item.to)
+      ? 'text-primary' 
+      : 'text-slate-700 hover:text-slate-900'
   ]"
+  @click="closeMenu"
+
 >
   <span class="relative z-10">{{ item.name }}</span>
+  <span 
+    class="absolute bottom-1.5 left-4 right-4 h-[2px] rounded-full transition-all duration-300"
+    :class="[
+      isLinkActive(item.to) 
+        ? 'bg-primary w-[calc(100%-2rem)]' 
+        : 'bg-slate-400 w-0 group-hover:w-[calc(100%-2rem)]'
+    ]"
+  />
 </NuxtLink>
         </li>
       </ul>
@@ -126,13 +150,15 @@ v-for="item in [
 v-for="item in [
             { name: 'Accueil', to: '/' },
             { name: 'Réalisations', to: '/realisations' },
-            { name: 'Services', to: '/services' },
+            { name: 'Services', to: '/#services' },
             { name: 'Contact', to: '/contact' }
           ]" :key="item.to">
             <NuxtLink 
               :to="item.to" 
               class="block py-3 px-4 rounded-xl text-base font-semibold text-slate-800 hover:bg-gray-50 hover:text-primary transition-all"
-              active-class="!bg-primary/10 !text-primary"
+              :class="{
+                '!bg-primary/10 !text-primary': isLinkActive(item.to)
+              }"
               @click="closeMenu"
             >
               {{ item.name }}
