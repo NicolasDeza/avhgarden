@@ -11,7 +11,7 @@
             Un projet de rénovation en tête ?
           </h2>
 
-          <p class="mx-auto mt-5 max-w-xl text-lg text-orange-50 font-medium">
+          <p class="mx-auto mt-5 max-w-3xl text-lg text-orange-50 font-medium">
             Confiez vos espaces à un expert. De la conception à la réalisation, nous donnons vie à vos idées.
           </p>
 

@@ -1,49 +1,71 @@
 <script setup>
+import { Facebook, MapPin, Phone, Mail } from 'lucide-vue-next';
+
+const route = useRoute();
+const router = useRouter();
 const year = new Date().getFullYear();
 
 // État pour gérer l'ouverture des accordéons (mobile uniquement)
 const openSections = ref({
   navigation: false,
-  resources: false,
+  coordonnees: false,
 });
 
 const toggleSection = (section) => {
   openSections.value[section] = !openSections.value[section];
 };
+
+const handleLogoClick = async () => {
+  if (route.path === '/') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    await router.push('/');
+  }
+};
 </script>
 
 <template>
   <footer
-    class="w-full border-t border-white/20 bg-[#1A1A1A]"
+    class="w-full border-t border-white/10 bg-[#1A1A1A] text-white"
     aria-label="Pied de page"
   >
-    <div class="mx-auto max-w-6xl px-6 pt-12 pb-4 md:pb-6">
-      <!-- Grille responsive avec accordéon sur mobile -->
-      <div class="grid gap-8 md:grid-cols-3">
-        <!-- Colonne 1 : Branding (toujours visible) -->
-        <div class="text-center md:text-left pb-6">
-          <h2 class="text-xl font-semibold text-white">
-            Nuxt Starter Vitrine
-          </h2>
-          <p
-            class="mt-2 text-sm text-white/60 mx-auto md:mx-0 max-w-[220px]"
+    <div class="mx-auto max-w-6xl px-6 pt-16 pb-8">
+      <div class="grid gap-12 md:grid-cols-[2fr_1fr_1fr]">
+        
+        <div class="flex flex-col items-center md:items-start">
+          <button
+            class="text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity cursor-pointer"
+            @click="handleLogoClick"
           >
-            Une base moderne et performante pour créer des sites Nuxt prêts pour
-            la production.
+            AVH <span class="text-primary">Garden</span>
+          </button>
+          <p class="mt-4 text-sm leading-relaxed text-white/60 text-center md:text-left">
+            Entreprise spécialisée en aménagement extérieur et rénovation intérieure en Brabant Wallon et Province de Namur. 
+            Terrassement, pavage, égouttage, carrelage, salles de bain & projets sur mesure.
           </p>
+          <div class="mt-6">
+            <a 
+              href="https://www.facebook.com/p/Avh-garden-100064966030686/" 
+              target="blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 border border-white/10 text-white/60 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300" 
+              aria-label="Facebook"
+            >
+              <Facebook :size="20" />
+            </a>
+          </div>
         </div>
 
-        <!-- Colonne 2 : Navigation (accordéon sur mobile) -->
         <nav aria-label="Navigation du pied de page">
           <!-- Titre avec bouton toggle (mobile uniquement) -->
           <button
             type="button"
-            class="flex w-full items-center justify-between text-sm font-semibold text-white md:cursor-default md:pointer-events-none"
+            class="flex w-full items-center justify-between text-sm font-bold uppercase tracking-widest text-primary md:cursor-default md:pointer-events-none"
             :aria-expanded="openSections.navigation"
             aria-controls="nav-links"
             @click="toggleSection('navigation')"
           >
-            <span>Navigation</span>
+            <span>Menu</span>
             <svg
               class="h-5 w-5 md:hidden"
               fill="none"
@@ -76,43 +98,37 @@ const toggleSection = (section) => {
             class="grid overflow-hidden transition-all duration-300 ease-in-out md:block"
             :class="
               openSections.navigation
-                ? 'mt-2 grid-rows-[1fr]'
-                : 'grid-rows-[0fr] md:mt-2 md:grid-rows-[1fr]'
+                ? 'mt-6 grid-rows-[1fr]'
+                : 'grid-rows-[0fr] md:mt-6 md:grid-rows-[1fr]'
             "
           >
-            <ul class="min-h-0 space-y-2 text-sm">
+            <ul class="min-h-0 space-y-4 text-sm text-left">
               <li>
-                <NuxtLink
-                  to="/"
-                  class="text-white/60 hover:text-white transition"
-                >
-                  Accueil
-                </NuxtLink>
+                <NuxtLink to="/" class="text-white/60 hover:text-primary-hover transition-colors">Accueil</NuxtLink>
               </li>
-             
               <li>
-                <NuxtLink
-                  to="/contact"
-                  class="text-white/60 hover:text-white transition"
-                >
-                  Contact
-                </NuxtLink>
+                <NuxtLink to="/realisations" class="text-white/60 hover:text-primary-hover transition-colors">Réalisations</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/services" class="text-white/60 hover:text-primary-hover transition-colors">Services</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/contact" class="text-white/60 hover:text-primary-hover transition-colors">Contact</NuxtLink>
               </li>
             </ul>
           </div>
         </nav>
 
-        <!-- Colonne 3 : Ressources (accordéon sur mobile) -->
-        <nav aria-label="Ressources">
+        <div aria-label="Coordonnées">
           <!-- Titre avec bouton toggle (mobile uniquement) -->
           <button
             type="button"
-            class="flex w-full items-center justify-between text-sm font-semibold text-white md:cursor-default md:pointer-events-none"
-            :aria-expanded="openSections.resources"
-            aria-controls="resource-links"
-            @click="toggleSection('resources')"
+            class="flex w-full items-center justify-between text-sm font-bold uppercase tracking-widest text-primary md:cursor-default md:pointer-events-none"
+            :aria-expanded="openSections.coordonnees"
+            aria-controls="coordonnees-info"
+            @click="toggleSection('coordonnees')"
           >
-            <span>Ressources</span>
+            <span>Coordonnées</span>
             <svg
               class="h-5 w-5 md:hidden"
               fill="none"
@@ -134,63 +150,54 @@ const toggleSection = (section) => {
                 stroke-width="2"
                 d="M12 4v16"
                 class="transition-opacity duration-200"
-                :class="openSections.resources ? 'opacity-0' : 'opacity-100'"
+                :class="openSections.coordonnees ? 'opacity-0' : 'opacity-100'"
               />
             </svg>
           </button>
 
-          <!-- Liste de liens (accordéon sur mobile, toujours visible sur desktop) -->
+          <!-- Informations de contact (accordéon sur mobile, toujours visible sur desktop) -->
           <div
-            id="resource-links"
+            id="coordonnees-info"
             class="grid overflow-hidden transition-all duration-300 ease-in-out md:block"
             :class="
-              openSections.resources
-                ? 'mt-2 grid-rows-[1fr]'
-                : 'grid-rows-[0fr] md:mt-2 md:grid-rows-[1fr]'
+              openSections.coordonnees
+                ? 'mt-6 grid-rows-[1fr]'
+                : 'grid-rows-[0fr] md:mt-6 md:grid-rows-[1fr]'
             "
           >
-            <ul class="min-h-0 space-y-2 text-sm">
-              <li>
-                <NuxtLink
-                  to="https://github.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-white/60 hover:text-white transition"
-                  aria-label="GitHub (ouvre dans un nouvel onglet)"
-                >
-                  GitHub
-                </NuxtLink>
+            <ul class="min-h-0 space-y-4 text-sm text-white/60 text-left">
+              <li class="flex items-start justify-start gap-3">
+                <MapPin :size="20" class="text-primary shrink-0 mt-0.5" />
+                <span>Rue Renier 11<br >5031 Grand Leez</span>
               </li>
-              <li>
-                <NuxtLink
-                  to="/legal/mentions-legales"
-                  class="text-white/60 hover:text-white transition"
-                >
-                  Mentions légales
-                </NuxtLink>
+              <li class="flex items-center justify-start gap-3">
+                <Phone :size="20" class="text-primary shrink-0" />
+                <a href="tel:+32494801596" class="hover:text-primary-hover transition-colors">+32 494 80 15 96</a>
+              </li>
+              <li class="flex items-center justify-start gap-3">
+                <Mail :size="20" class="text-primary shrink-0" />
+                <a href="mailto:avh-garden@hotmail.com" class="hover:text-primary-hover transition-colors">avh-garden@hotmail.com</a>
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
+
       </div>
 
-      <!-- Bas de footer -->
-      <div
-        class="mt-10 border-t border-white/20 pt-6 text-center text-sm text-white/50"
-      >
-        <p>© {{ year }} Nuxt Starter Vitrine. Tous droits réservés.</p>
-        <p class="mt-2">
-          Site réalisé par
-          <NuxtLink
-            to="https://nicolasdeza.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white/70 hover:text-white transition underline"
-            aria-label="Nicolas Deza (ouvre dans un nouvel onglet)"
-          >
-            Nicolas Deza
-          </NuxtLink>
-        </p>
+      <div class="mt-16 border-t border-white/5 pt-8">
+        <div class="flex flex-col items-center justify-between gap-4 md:flex-row text-xs text-white/40">
+          <p>© {{ year }} AVH Garden — Tous droits réservés.</p>
+          
+          <div class="flex gap-6">
+            <NuxtLink to="/legal/mentions-legales" class="hover:text-primary-hover transition">Mentions légales</NuxtLink>
+            <NuxtLink to="/legal/politique-confidentialite" class="hover:text-primary-hover transition">Confidentialité</NuxtLink>
+          </div>
+
+          <p>
+            Site réalisé par 
+            <a href="https://nicolasdeza.com" target="_blank" class="text-primary hover:underline">Nicolas Deza</a>
+          </p>
+        </div>
       </div>
     </div>
   </footer>
