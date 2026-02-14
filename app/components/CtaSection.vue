@@ -18,9 +18,9 @@
           <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <NuxtLink
               to="/contact"
-              class="group inline-flex items-center gap-3 rounded-xl bg-white px-8 py-4 text-lg font-bold text-orange-600 transition-all hover:scale-105 hover:shadow-xl active:scale-95"
+              class="group inline-flex items-center gap-3 rounded-xl bg-white px-8 py-3 text-lg font-bold text-orange-600 transition-all hover:scale-105 hover:shadow-xl active:scale-95"
             >
-              Demander mon devis gratuit
+              Mon devis gratuit
             </NuxtLink>
           </div>
         </div>

@@ -61,42 +61,48 @@ onUnmounted(() => {
         </NuxtLink>
       </div>
 
-      <ul class="hidden md:flex items-center gap-10">
+      <ul class="hidden md:flex items-center gap-8">
         <li
 v-for="item in [
           { name: 'Accueil', to: '/' },
           { name: 'Réalisations', to: '/realisations' },
           { name: 'Services', to: '/services' },
-          { name: 'Contact', to: '/contact' }
+          { name: 'Contact', to: '/contact' },
+
         ]" :key="item.to">
           <NuxtLink
-            :to="item.to"
-            class="relative text-sm font-bold uppercase tracking-widest text-slate-600 hover:text-primary transition-all duration-300 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
-          >
-            {{ item.name }}
-          </NuxtLink>
+  :to="item.to"
+  class="relative text-[14px] font-bold uppercase tracking-[0.2em] transition-all duration-300 px-4 py-2.5 rounded-full"
+  :class="[
+    $route.path === item.to 
+      ? 'text-primary bg-primary/10' 
+      : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'
+  ]"
+>
+  <span class="relative z-10">{{ item.name }}</span>
+</NuxtLink>
         </li>
       </ul>
 
       <div class="flex items-center gap-5">
         <NuxtLink
           to="/contact"
-          class="hidden sm:inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-2.5 text-sm font-bold text-white shadow-xl shadow-slate-200 hover:bg-primary hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
+          class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary px-8 py-2.5 text-sm font-bold text-white  hover:bg-primary-hover hover:scale-105 transition-all duration-300"
         >
           Devis gratuit
         </NuxtLink>
 
         <button
           type="button"
-          class="md:hidden flex h-10 w-10 items-center justify-center rounded-xl bg-gray-50 text-slate-900 hover:bg-gray-100 transition-all"
+          class="md:hidden flex h-10 w-10 items-center justify-center text-slate-900 hover:text-primary transition-all"
           :aria-label="isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
           :aria-expanded="isMenuOpen"
           @click="toggleMenu"
         >
-          <div class="relative w-5 h-5">
-            <span :class="['absolute h-0.5 w-5 bg-current transform transition-all duration-300', isMenuOpen ? 'rotate-45 top-2' : 'top-1']"/>
-            <span :class="['absolute h-0.5 w-5 bg-current top-2 transition-all duration-300', isMenuOpen ? 'opacity-0' : 'opacity-100']"/>
-            <span :class="['absolute h-0.5 w-5 bg-current transform transition-all duration-300', isMenuOpen ? '-rotate-45 top-2' : 'top-3']"/>
+          <div class="relative w-6 h-5">
+            <span :class="['absolute h-[2.5px] w-6 bg-current rounded-full transform transition-all duration-300', isMenuOpen ? 'rotate-45 top-[9px]' : 'top-0']"/>
+            <span :class="['absolute h-[2.5px] w-6 bg-current rounded-full top-[9px] transition-all duration-300', isMenuOpen ? 'opacity-0' : 'opacity-100']"/>
+            <span :class="['absolute h-[2.5px] w-6 bg-current rounded-full transform transition-all duration-300', isMenuOpen ? '-rotate-45 top-[9px]' : 'top-[18px]']"/>
           </div>
         </button>
       </div>
@@ -126,6 +132,7 @@ v-for="item in [
             <NuxtLink 
               :to="item.to" 
               class="block py-3 px-4 rounded-xl text-base font-semibold text-slate-800 hover:bg-gray-50 hover:text-primary transition-all"
+              active-class="!bg-primary/10 !text-primary"
               @click="closeMenu"
             >
               {{ item.name }}

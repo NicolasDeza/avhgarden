@@ -35,19 +35,19 @@
           Nous ne nous contentons pas de construire, nous façonnons des espaces de vie durables. Notre expertise certifiée est le gage d'une réalisation sans compromis.
         </p>
 
-        <div class="grid grid-cols-2 gap-8  border-t border-white/5 pt-10">
+        
        
 
         <div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
           <NuxtLink 
             to="/realisations" 
-            class="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-bold text-md transition-all hover:scale-105"
+            class="w-full sm:w-auto bg-primary hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-bold text-md text-center transition-all hover:scale-105"
           >
             Voir nos travaux
           </NuxtLink>
           
         </div>
-      </div>
+      
 
     </div>
   </div>
