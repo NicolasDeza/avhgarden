@@ -29,7 +29,7 @@ const handleLogoClick = async () => {
     class="w-full border-t border-white/10 bg-[#1A1A1A] text-white"
     aria-label="Pied de page"
   >
-    <div class="mx-auto max-w-6xl px-6 pt-16 pb-8">
+    <div class="mx-auto max-w-[1440px] px-6 pt-16 pb-8">
       <div class="grid gap-12 md:grid-cols-[2fr_1fr_1fr]">
         
         <div class="flex flex-col items-center md:items-start">

@@ -14,6 +14,7 @@ const ContactSchema = z.object({
     .toLowerCase()
     .email("Email invalide")
     .max(255, "L'email est trop long"),
+  phone: z.string().trim().optional(),
   message: z
     .string()
     .trim()
@@ -54,7 +55,7 @@ export default defineEventHandler(async (event) => {
     });
   }
 
-  const { name, email, message } = parsed.data;
+  const { name, email, phone, message } = parsed.data;
 
   const transporter = nodemailer.createTransport({
     host: config.smtp.host,
@@ -74,6 +75,7 @@ export default defineEventHandler(async (event) => {
       subject: `Nouveau message de ${name}`,
       text: `Nom : ${name}
 Email : ${email}
+Téléphone : ${phone || "Non renseigné"}
 
 Message :
 ${message}`,
@@ -81,6 +83,7 @@ ${message}`,
         <h2>Nouveau message via le site</h2>
         <p><strong>Nom :</strong> ${name}</p>
         <p><strong>Email :</strong> ${email}</p>
+        <p><strong>Téléphone :</strong> ${phone || "Non renseigné"}</p>
         <p><strong>Message :</strong></p>
         <p>${message.replace(/\n/g, "<br>")}</p>
       `,

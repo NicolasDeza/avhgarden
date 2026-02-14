@@ -46,7 +46,7 @@ onUnmounted(() => {
     ]"
   >
     <nav
-      class="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between"
+      class="max-w-[1440px] mx-auto px-6 lg:px-6 h-20 flex items-center justify-between"
       aria-label="Navigation principale"
     >
       <div class="flex-shrink-0">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue"
-import { Mail, MapPin, Send, ShieldCheck } from "lucide-vue-next"
+import { Mail, MapPin, Send, ShieldCheck, User, MessageSquare, Phone } from "lucide-vue-next"
 import { useContactForm } from "~/composables/useContactForm"
 
 const { form, errors, loading, success, submit } = useContactForm()
@@ -64,103 +64,78 @@ onBeforeUnmount(() => {
 
 <template>
   <section
-    class="w-full bg-gradient-to-b from-white to-slate-50/50 dark:from-[#0F172B] dark:to-[#0F172B] py-20"
+    class="w-full bg-gradient-to-b from-white to-slate-50/50 py-20"
     aria-label="Formulaire de contact"
   >
     <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         <!-- Colonne gauche : Informations -->
-        <div class="space-y-8">
-          <div class="space-y-4">
-            <div
-              class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium"
-            >
-              Contact
-            </div>
-            <h1
-              class="text-4xl sm:text-5xl font-bold text-foreground dark:text-white leading-tight"
-            >
-              Discutons de votre projet
-            </h1>
-            <p
-              class="text-lg text-foreground/70 dark:text-white/70 leading-relaxed"
-            >
-              Envie de collaborer ? N'hésitez pas à me contacter pour échanger
-              sur vos besoins.
-            </p>
-          </div>
-
-          <div class="space-y-4">
-            <div
-              class="flex items-center gap-4 p-4 rounded-xl bg-white/50 dark:bg-white/5 border border-foreground/10 dark:border-white/10 hover:bg-white dark:hover:bg-white/10 hover:border-primary/30 hover:shadow-md transition-all duration-300 cursor-pointer"
-            >
-              <div class="p-3 rounded-lg bg-primary/10">
-                <Mail :size="22" class="text-primary" />
-              </div>
-              <div>
-                <p
-                  class="text-xs font-medium text-foreground/50 dark:text-white/50 uppercase tracking-wide mb-1"
-                >
-                  Email
-                </p>
-                <a
-                  href="mailto:nicolasdeza@hotmail.be"
-                  class="text-foreground dark:text-white font-medium hover:text-primary transition"
-                >
-                  nicolasdeza@hotmail.be
-                </a>
-              </div>
+        <div class="relative bg-[#1E1E1E] rounded-2xl p-8 md:p-10 shadow-2xl overflow-hidden">
+          <!-- Texture de fond subtile -->
+          
+          <div class="relative z-10 space-y-8">
+            <!-- Badge animé -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"/>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"/>
+              </span>
+              <span class="text-primary font-bold text-[10px] uppercase tracking-widest">Une question ? Contactez-nous</span>
             </div>
 
-            <div
-              class="flex items-center gap-4 p-4 rounded-xl bg-white/50 dark:bg-white/5 border border-foreground/10 dark:border-white/10 hover:bg-white dark:hover:bg-white/10 hover:border-primary/30 hover:shadow-md transition-all duration-300 cursor-pointer"
-            >
-              <div class="p-3 rounded-lg bg-primary/10">
-                <MapPin :size="22" class="text-primary" />
-              </div>
-              <div>
-                <p
-                  class="text-xs font-medium text-foreground/50 dark:text-white/50 uppercase tracking-wide mb-1"
-                >
-                  Localisation
-                </p>
-                <p class="text-foreground dark:text-white font-medium">
-                  Belgique
-                </p>
-              </div>
-            </div>
-
-            <div class="pt-2">
-              <p
-                class="text-sm font-medium text-foreground/50 dark:text-white/50 mb-3"
-              >
-                Retrouvez-moi sur
+            <!-- Titre -->
+            <div class="space-y-4">
+              <h2 class="text-4xl sm:text-5xl font-black text-white leading-[1.05] tracking-tight">
+                Concrétisons votre projet <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">ensemble.</span>
+              </h2>
+              <p class="text-slate-400 text-lg leading-relaxed font-light">
+                Vous avez un projet en tête ? Remplissez le formulaire et recevez votre devis personnalisé sous 48h.
               </p>
-              <div class="flex flex-wrap gap-2">
-                <a
-                  href="https://www.linkedin.com/in/nicolas-deza-411711330/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="px-4 py-2 rounded-lg bg-foreground/5 dark:bg-white/5 text-foreground dark:text-white hover:bg-primary dark:hover:bg-primary hover:text-white text-sm font-medium transition"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com/NicolasDeza"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="px-4 py-2 rounded-lg bg-foreground/5 dark:bg-white/5 text-foreground dark:text-white hover:bg-primary dark:hover:bg-primary hover:text-white text-sm font-medium transition"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://www.instagram.com/nicolas__deza/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="px-4 py-2 rounded-lg bg-foreground/5 dark:bg-white/5 text-foreground dark:text-white hover:bg-primary dark:hover:bg-primary hover:text-white text-sm font-medium transition"
-                >
-                  Instagram
-                </a>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="space-y-4 pt-4">
+              <a
+                href="mailto:avh-garden@hotmail.com"
+                class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group"
+              >
+                <div class="p-3 rounded-lg bg-primary/20 group-hover:bg-primary/30 transition-colors">
+                  <Mail :size="22" class="text-primary" />
+                </div>
+                <div>
+                  <p class="text-xs font-medium text-white/50 uppercase tracking-wide mb-1">
+                    Email
+                  </p>
+                  <p class="text-white font-semibold group-hover:text-primary transition-colors">
+                    avh-garden@hotmail.com
+                  </p>
+                </div>
+              </a>
+
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+                <div class="p-3 rounded-lg bg-primary/20">
+                  <MapPin :size="22" class="text-primary" />
+                </div>
+                <div>
+                  <p class="text-xs font-medium text-white/50 uppercase tracking-wide mb-1">
+                    Zone d'intervention
+                  </p>
+                  <p class="text-white font-semibold">
+                    Brabant Wallon & Namur
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats rapides -->
+            <div class="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
+              <div class="text-center">
+                <p class="text-3xl font-black text-primary">+25</p>
+                <p class="text-xs text-slate-400 uppercase tracking-wide mt-1">Ans d'expérience</p>
+              </div>
+              <div class="text-center">
+                <p class="text-3xl font-black text-primary">100%</p>
+                <p class="text-xs text-slate-400 uppercase tracking-wide mt-1">Clients satisfaits</p>
               </div>
             </div>
           </div>
@@ -168,14 +143,14 @@ onBeforeUnmount(() => {
 
         <!-- Colonne droite : Formulaire -->
         <form
-          class="p-8 rounded-2xl bg-white dark:bg-slate-900/50 border border-foreground/10 dark:border-white/10 shadow-xl space-y-6"
+          class="p-8 lg:p-10 rounded-2xl bg-white border border-foreground/10 shadow-xl space-y-6"
           @submit.prevent="submit"
         >
           <div
             v-if="errors.global"
             role="alert"
             aria-live="polite"
-            class="p-4 rounded-lg bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 text-sm"
+            class="p-4 rounded-lg bg-red-50 border border-red-200 text-red-600 text-sm"
           >
             {{ errors.global }}
           </div>
@@ -183,9 +158,11 @@ onBeforeUnmount(() => {
           <div class="space-y-2">
             <label
               for="name"
-              class="block text-sm font-semibold text-foreground dark:text-white"
+              class="text-sm font-semibold text-foreground flex items-center gap-2"
             >
+              <User :size="16" class="text-primary" />
               Nom complet
+              <span class="text-red-500">*</span>
             </label>
             <input
               id="name"
@@ -195,17 +172,13 @@ onBeforeUnmount(() => {
               required
               :aria-invalid="!!errors.name"
               :aria-describedby="errors.name ? 'name-error' : undefined"
-              class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border-2 transition-colors text-foreground dark:text-white placeholder:text-foreground/50 dark:placeholder:text-white/50 outline-none focus-visible:border-primary"
-              :class="
-                errors.name
-                  ? 'border-red-500'
-                  : 'border-transparent focus-visible:border-primary'
-              "
+              class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-foreground/10 transition-all text-foreground placeholder:text-foreground/40 outline-none focus:border-primary focus:shadow-[0_0_0_3px_rgba(233,127,36,0.1)]"
+              :class="errors.name ? 'border-red-500 focus:border-red-500' : ''"
             >
             <p
               v-if="errors.name"
               id="name-error"
-              class="text-xs text-red-500"
+              class="text-xs text-red-500 flex items-center gap-1"
               role="alert"
             >
               {{ errors.name }}
@@ -215,29 +188,27 @@ onBeforeUnmount(() => {
           <div class="space-y-2">
             <label
               for="email"
-              class="block text-sm font-semibold text-foreground dark:text-white"
+              class="text-sm font-semibold text-foreground flex items-center gap-2"
             >
+              <Mail :size="16" class="text-primary" />
               Email
+              <span class="text-red-500">*</span>
             </label>
             <input
               id="email"
               v-model="form.email"
               type="email"
-              placeholder="john@exemple.com"
+              placeholder="votre@email.com"
               required
               :aria-invalid="!!errors.email"
               :aria-describedby="errors.email ? 'email-error' : undefined"
-              class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border-2 transition-colors text-foreground dark:text-white placeholder:text-foreground/50 dark:placeholder:text-white/50 outline-none focus-visible:border-primary"
-              :class="
-                errors.email
-                  ? 'border-red-500'
-                  : 'border-transparent focus-visible:border-primary'
-              "
+              class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-foreground/10 transition-all text-foreground placeholder:text-foreground/40 outline-none focus:border-primary focus:shadow-[0_0_0_3px_rgba(233,127,36,0.1)]"
+              :class="errors.email ? 'border-red-500 focus:border-red-500' : ''"
             >
             <p
               v-if="errors.email"
               id="email-error"
-              class="text-xs text-red-500"
+              class="text-xs text-red-500 flex items-center gap-1"
               role="alert"
             >
               {{ errors.email }}
@@ -246,10 +217,40 @@ onBeforeUnmount(() => {
 
           <div class="space-y-2">
             <label
-              for="message"
-              class="block text-sm font-semibold text-foreground dark:text-white"
+              for="phone"
+              class="text-sm font-semibold text-foreground flex items-center gap-2"
             >
+              <Phone :size="16" class="text-primary" />
+              Téléphone
+            </label>
+            <input
+              id="phone"
+              v-model="form.phone"
+              type="tel"
+              placeholder="+32 475 12 34 56"
+              :aria-invalid="!!errors.phone"
+              :aria-describedby="errors.phone ? 'phone-error' : undefined"
+              class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-foreground/10 transition-all text-foreground placeholder:text-foreground/40 outline-none focus:border-primary focus:shadow-[0_0_0_3px_rgba(233,127,36,0.1)]"
+              :class="errors.phone ? 'border-red-500 focus:border-red-500' : ''"
+            >
+            <p
+              v-if="errors.phone"
+              id="phone-error"
+              class="text-xs text-red-500 flex items-center gap-1"
+              role="alert"
+            >
+              {{ errors.phone }}
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <label
+              for="message"
+              class="text-sm font-semibold text-foreground flex items-center gap-2"
+            >
+              <MessageSquare :size="16" class="text-primary" />
               Message
+              <span class="text-red-500">*</span>
             </label>
             <textarea
               id="message"
@@ -259,17 +260,13 @@ onBeforeUnmount(() => {
               required
               :aria-invalid="!!errors.message"
               :aria-describedby="errors.message ? 'message-error' : undefined"
-              class="w-full px-4 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/50 border-2 resize-none transition-colors text-foreground dark:text-white placeholder:text-foreground/50 dark:placeholder:text-white/50 outline-none focus-visible:border-primary"
-              :class="
-                errors.message
-                  ? 'border-red-500'
-                  : 'border-transparent focus-visible:border-primary'
-              "
+              class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-foreground/10 resize-none transition-all text-foreground placeholder:text-foreground/40 outline-none focus:border-primary focus:shadow-[0_0_0_3px_rgba(233,127,36,0.1)]"
+              :class="errors.message ? 'border-red-500 focus:border-red-500' : ''"
             />
             <p
               v-if="errors.message"
               id="message-error"
-              class="text-xs text-red-500"
+              class="text-xs text-red-500 flex items-center gap-1"
               role="alert"
             >
               {{ errors.message }}
@@ -285,7 +282,7 @@ onBeforeUnmount(() => {
 </div>
 
           <div
-            class="flex items-center justify-center gap-2 text-xs text-foreground/50 dark:text-white/50 mb-2"
+            class="flex items-center justify-center gap-2 text-xs text-foreground/50 mb-2"
           >
             <ShieldCheck :size="14" class="text-primary" />
             <span>Formulaire protégé contre le spam</span>
@@ -294,19 +291,20 @@ onBeforeUnmount(() => {
           <button
             type="submit"
             :disabled="loading"
-            class="w-full px-6 py-3.5 rounded-lg bg-primary hover:bg-primary-hover text-white font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+            class="group relative w-full px-6 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-3 overflow-hidden"
           >
-            <span>
+            <span class="relative z-10">
               {{ loading ? "Envoi en cours..." : "Envoyer le message" }}
             </span>
-            <Send v-if="!loading" :size="18" />
+            <Send v-if="!loading" :size="20" class="relative z-10 group-hover:translate-x-0.5 transition-transform" />
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
           </button>
 
           <p
             v-if="success"
             role="status"
             aria-live="polite"
-            class="p-4 rounded-lg bg-green-50 dark:bg-green-500/10 border border-green-200 dark:border-green-500/20 text-green-600 dark:text-green-400 text-sm text-center font-medium"
+            class="p-4 rounded-lg bg-green-50 border border-green-200 text-green-600 text-sm text-center font-medium"
           >
             ✓ Message envoyé avec succès !
           </p>
