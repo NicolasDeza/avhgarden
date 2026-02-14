@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue"
-import { Mail, MapPin, Send, ShieldCheck, User, MessageSquare, Phone } from "lucide-vue-next"
+import { Mail, MapPin, Send, ShieldCheck, User, MessageSquare, Phone, Facebook } from "lucide-vue-next"
 import { useContactForm } from "~/composables/useContactForm"
 
 const { form, errors, loading, success, submit } = useContactForm()
@@ -125,6 +125,19 @@ onBeforeUnmount(() => {
                   </p>
                 </div>
               </div>
+            </div>
+
+            <!-- Lien Facebook -->
+            <div class="pt-4">
+              <a 
+                href="https://www.facebook.com/p/Avh-garden-100064966030686/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-white/5 border border-white/10 text-white/60 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300" 
+                aria-label="Visitez notre page Facebook (ouvre dans un nouvel onglet)"
+              >
+                <Facebook :size="22" />
+              </a>
             </div>
 
             <!-- Stats rapides -->

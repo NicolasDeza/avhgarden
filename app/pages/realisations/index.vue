@@ -1,27 +1,11 @@
 <script setup>
+import { realisations } from '@/data/realisations'
+
 useSeoMeta({
   title: "Nos réalisations – AVH Garden",
   description:
     "Découvrez nos chantiers de rénovation et d’aménagement réalisés en Belgique.",
 })
-
-const projects = [
-  {
-    title: "Aménagement terrasse à Liège",
-    slug: "amenagement-terrasse-liege",
-    image: "/images/realisations/terrasse-cover.jpg",
-  },
-  {
-    title: "Rénovation salle de bain",
-    slug: "renovation-salle-de-bain-namur",
-    image: "/images/realisations/sdb-cover.jpg",
-  },
-  {
-    title: "Clôture & jardin moderne",
-    slug: "cloture-jardin-moderne",
-    image: "/images/realisations/jardin-cover.jpg",
-  },
-]
 </script>
 
 <template>
@@ -63,7 +47,7 @@ const projects = [
 
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <NuxtLink
-            v-for="project in projects"
+            v-for="project in realisations"
             :key="project.slug"
             :to="`/realisations/${project.slug}`"
             class="group relative block overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300"
@@ -71,7 +55,7 @@ const projects = [
             <!-- Image -->
             <div class="relative aspect-[4/3]">
               <NuxtImg
-                :src="project.image"
+                :src="project.cover"
                 :alt="project.title"
                 format="webp"
                 quality="80"
