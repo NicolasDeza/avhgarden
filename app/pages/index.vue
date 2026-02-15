@@ -1,7 +1,7 @@
 <script setup>
 import ServicesSection from '~/components/ServicesSection.vue';
 
-const canonical = useCanonical();
+const canonical = useCanonical()
 
 useHead(() => ({
   link: [
@@ -10,31 +10,50 @@ useHead(() => ({
       href: canonical.value,
     },
   ],
-}));
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "AVH Garden",
+        url: "https://avh-garden.be",
+        telephone: "+32494414994",
+        priceRange: "€€",
+        description:
+          "Entreprise spécialisée en rénovation extérieure et intérieure en Belgique.",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "BE",
+        },
+      }),
+    },
+  ],
+}))
 
 useSeoMeta({
-  title: "Nuxt Starter Vitrine",
+  title:
+    "Entreprise d'aménagement extérieur et intérieur en Belgique",
   description:
-    "Template Nuxt moderne pour créer des sites vitrines performants, SEO-ready et prêts pour la production.",
+     "AVH Garden est spécialisée en aménagement extérieur, pavage et terrasses en Brabant Wallon et Province de Namur. Nous réalisons vos projets avec soin et professionnalisme. Devis gratuit.",
 
   robots: "index, follow",
 
-  ogTitle: "Nuxt Starter Vitrine",
+  ogTitle:
+      "AVH Garden – Aménagement extérieur et intérieur en Belgique",
   ogDescription:
-    "Base Nuxt moderne avec Tailwind, SEO, Dark Mode, ESLint et Nuxt Image.",
-  ogImage: "https://nuxt-starter-vitrine.vercel.app/og-starter.jpg",
-  ogUrl: "https://nuxt-starter-vitrine.vercel.app/",
+      "Spécialiste en aménagement extérieur, pavage et terrasses en Brabant Wallon et Namur. AVH Garden transforme vos extérieurs avec précision et expertise. Devis gratuit.",
+  ogImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  ogUrl: canonical,
   ogType: "website",
 
   twitterCard: "summary_large_image",
-  twitterTitle: "Nuxt Starter Vitrine",
+  twitterTitle: "AVH Garden – Entreprise de rénovation",
   twitterDescription:
-    "Template Nuxt prêt pour la production : SEO, performance et design moderne.",
-  twitterImage: "https://nuxt-starter-vitrine.vercel.app/og-starter.jpg",
+    "Aménagement extérieur, pavage et terrasses en Brabant Wallon & Namur. AVH Garden réalise vos projets avec précision. Devis gratuit.",
+  twitterImage: "https://www.avh-garden.be/og-avhgarden.jpg",
 });
 </script>
-
-
 
 
 <template>

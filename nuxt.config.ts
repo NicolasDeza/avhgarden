@@ -8,9 +8,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/sitemap"],
 
   site: {
-    url:
-      process.env.NUXT_PUBLIC_SITE_URL ||
-      "https://nuxt-starter-vitrine.vercel.app",
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://avh-garden.be",
   },
 
   // Runtime config (server + public)
@@ -32,7 +30,7 @@ export default defineNuxtConfig({
 
     // ===== Public (client) =====
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://www.cgrenov.be",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://www.avh-garden.be",
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
 
       // 🔥 Matomo (Analytics RGPD)
@@ -50,16 +48,16 @@ export default defineNuxtConfig({
         lang: "fr",
       },
 
-      titleTemplate: "%s – Nuxt Starter",
+      titleTemplate: "%s – AVH Garden",
 
       meta: [
         {
           name: "description",
           content:
-            "Starter Nuxt moderne pour créer des sites vitrines performants, SEO-ready et prêts pour la production.",
+            "AVH Garden est spécialisé en aménagement extérieur, pavage et rénovations en Brabant Wallon et Province de Namur. Devis gratuit et accompagnement personnalisé.",
         },
         { name: "robots", content: "index, follow" },
-        { name: "author", content: "Nuxt Starter" },
+        { name: "author", content: "AVH Garden" },
       ],
 
       link: [

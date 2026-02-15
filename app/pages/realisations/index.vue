@@ -1,10 +1,36 @@
 <script setup>
 import { realisations } from '@/data/realisations'
 
+const canonical = useCanonical()
+
+useHead(() => ({
+  link: [
+    {
+      rel: "canonical",
+      href: canonical.value,
+    },
+  ],
+}))
+
 useSeoMeta({
-  title: "Nos réalisations – AVH Garden",
+  title: "Nos réalisations",
   description:
-    "Découvrez nos chantiers de rénovation et d’aménagement réalisés en Belgique.",
+    "Découvrez nos réalisations en aménagement extérieur, pavage, terrasses et rénovation intérieure en Brabant Wallon et Province de Namur. Projets avant/après avec photos.",
+
+  robots: "index, follow",
+
+  ogTitle: "Nos réalisations – AVH Garden | Projets avant & après",
+  ogDescription:
+    "Parcourez nos chantiers réalisés : terrassement, pavage, rénovation intérieure et aménagements extérieurs en Belgique. Photos avant/après de nos projets.",
+  ogImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  ogUrl: canonical,
+  ogType: "website",
+
+  twitterCard: "summary_large_image",
+  twitterTitle: "Réalisations AVH Garden – Avant & Après",
+  twitterDescription:
+    "Découvrez nos projets d'aménagement extérieur et rénovation intérieure en Brabant Wallon et Namur. Photos avant/après.",
+  twitterImage: "https://www.avh-garden.be/og-avhgarden.jpg",
 })
 </script>
 
@@ -23,7 +49,7 @@ useSeoMeta({
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
 
       <div class="relative z-10 text-center px-6 max-w-4xl">
-        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-black tracking-[0.3em] uppercase text-primary bg-white/10 backdrop-blur-md rounded-full">
+        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-black tracking-[0.3em] uppercase text-primary bg-[[#1E1E1E]] backdrop-blur-md rounded-full">
           Portfolio
         </span>
         <h1 class="text-4xl sm:text-6xl font-black text-white mb-6 tracking-tight">

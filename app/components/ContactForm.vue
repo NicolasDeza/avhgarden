@@ -124,7 +124,7 @@ onBeforeUnmount(() => {
                     Téléphone
                   </p>
                   <p class="text-white font-semibold group-hover:text-primary transition-colors">
-                    +32 494 41 49 94
+                    +32 494 80 15 96
                   </p>
                 </div>
               </a>
