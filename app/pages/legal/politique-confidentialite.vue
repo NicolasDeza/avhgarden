@@ -11,14 +11,14 @@ useHead(() => ({
 }));
 
 useSeoMeta({
-  title: "Politique de Confidentialité",
-  description: "Politique de confidentialité et protection des données personnelles",
+  title: "Politique de Confidentialité – AVH Garden",
+  description: "Politique de confidentialité et protection des données personnelles d'AVH Garden",
   robots: "noindex, follow",
 });
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-white to-slate-50/50 dark:from-[#0F172B] dark:to-[#0A0E1A] py-20">
+  <div class="min-h-screen bg-gradient-to-b from-white to-slate-50/50 py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="space-y-8">
         <!-- En-tête -->
@@ -29,232 +29,167 @@ useSeoMeta({
             Protection des données
           </div>
           <h1
-            class="text-4xl sm:text-5xl font-bold text-foreground dark:text-white leading-tight"
+            class="text-4xl sm:text-5xl font-bold text-foreground leading-tight"
           >
             Politique de Confidentialité
           </h1>
-          <p class="text-lg text-foreground/70 dark:text-white/70">
-            Dernière mise à jour : 21 janvier 2026
+          <p class="text-lg text-foreground/70">
+            Dernière mise à jour : 15 février 2026
           </p>
         </div>
 
         <!-- Contenu -->
         <div
-          class="prose prose-slate dark:prose-invert max-w-none p-8 rounded-2xl bg-white dark:bg-slate-900/50 border border-foreground/10 dark:border-white/10 shadow-xl"
+          class="prose prose-slate max-w-none p-8 rounded-2xl bg-white border border-foreground/10 shadow-xl"
         >
           <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              1. Introduction
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Qui sommes-nous ?
             </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Conformément au Règlement Général sur la Protection des Données (RGPD)
-              et à la législation belge en matière de protection de la vie privée,
-              nous nous engageons à protéger vos données personnelles. Cette
-              politique de confidentialité explique comment nous collectons,
-              utilisons et protégeons vos informations.
+            <p class="text-foreground/80">
+              L'adresse de notre site Web est : <strong>https://avh-garden.be</strong>
             </p>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              2. Responsable du traitement
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Responsable du traitement
             </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              <strong>Nom :</strong> [Votre nom ou raison sociale]<br>
-              <strong>Adresse :</strong> [Votre adresse]<br>
-              <strong>Email :</strong> nicolasdeza@hotmail.be<br>
-              <strong>Pays :</strong> Belgique
+            <p class="text-foreground/80 mb-4">
+              Le responsable du traitement des données personnelles collectées via le site AVH Garden (le « Site ») est :
+            </p>
+            <p class="text-foreground/80">
+              <strong>Entreprise :</strong> Avh-garden<br>
+              <strong>Statut :</strong> Indépendant<br>
+              <strong>Numéro BCE / TVA :</strong> 0776.249.824 actif depuis 1997<br>
+              <strong>Adresse :</strong> Avenue de ninove 5, 5580 Rochefort<br><br>
+              <strong>E-mail de contact :</strong> avh-garden@hotmail.com<br>
+              <strong>Téléphone :</strong> +32 494 80 15 96<br><br>
+              <strong>Hébergeur :</strong> O2Switch<br>
+              <strong>Adresse hébergeur :</strong> Chemin des Pardiaux, 63000 Clermont-Ferrand, France<br>
+              <strong>Site web hébergeur :</strong> <a href="https://www.o2switch.fr" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://www.o2switch.fr</a>
+            </p>
+            <p class="text-foreground/80 mt-4">
+              AVH Garden s'engage à protéger la vie privée des visiteurs et à respecter la législation applicable, notamment le Règlement Général sur la Protection des Données (RGPD) et la législation belge liée à la protection des données.
             </p>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              3. Données collectées
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Données personnelles collectées
             </h2>
-            <p class="text-foreground/80 dark:text-white/80 mb-4">
-              Nous pouvons collecter les données personnelles suivantes :
+            
+            <p class="text-foreground/80 mb-4">
+              Via le formulaire de contact, nous collectons :
             </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li>Nom et prénom</li>
+            <ul class="text-foreground/80 list-disc pl-6 space-y-2">
+              <li>Nom</li>
               <li>Adresse e-mail</li>
               <li>Numéro de téléphone (si fourni)</li>
-              <li>Entreprise (si fourni)</li>
-              <li>Données de navigation (voir section sur l'analyse d'audience)</li>
+              <li>Message</li>
+            </ul>
+            <p class="text-foreground/80 mt-3">
+              Ces données sont utilisées uniquement pour répondre à votre demande.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Cookies
+            </h2>
+            <p class="text-foreground/80 mb-3">
+              Le site utilise uniquement des cookies essentiels, nécessaires pour améliorer le confort de navigation et se souvenir d'éventuelles préférences d'affichage.
+            </p>
+            <p class="text-foreground/80 mt-4">
+              Aucun cookie publicitaire, analytique ou de suivi n'est installé.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Utilisation et transmission de vos données personnelles
+            </h2>
+            <p class="text-foreground/80 mb-3">
+              Les données collectées via le formulaire de contact :
+            </p>
+            <ul class="text-foreground/80 list-disc pl-6 space-y-2">
+              <li>ne sont jamais vendues</li>
+              <li>ne sont pas utilisées à des fins de marketing</li>
+              <li>ne sont transmises à aucun tiers, sauf nécessité technique (hébergeur, service anti-spam) ou obligation légale</li>
             </ul>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              4. Finalités du traitement
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Durées de stockage de vos données
             </h2>
-            <p class="text-foreground/80 dark:text-white/80 mb-4">
-              Vos données personnelles sont collectées pour les finalités suivantes :
-            </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li>Répondre à vos demandes de contact</li>
-              <li>Fournir les services demandés</li>
-              <li>Améliorer notre site web et nos services</li>
-              <li>Mesurer l'audience du site (via Matomo)</li>
-              <li>Respecter nos obligations légales</li>
+            <ul class="text-foreground/80 list-disc pl-6 space-y-2">
+              <li><strong>Formulaire de contact :</strong> les données sont conservées uniquement le temps nécessaire au traitement de votre demande.</li>
+              <li>Aucun compte utilisateur n'étant disponible, aucune donnée de profil n'est conservée.</li>
             </ul>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              5. Base légale du traitement
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Vos droits (RGPD)
             </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Le traitement de vos données repose sur :
+            <p class="text-foreground/80 mb-3">
+              Vous disposez des droits suivants :
             </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li><strong>Votre consentement</strong> : lorsque vous remplissez le formulaire de contact</li>
-              <li><strong>Notre intérêt légitime</strong> : pour l'analyse d'audience et l'amélioration du site</li>
-              <li><strong>L'exécution d'un contrat</strong> : pour fournir les services demandés</li>
+            <ul class="text-foreground/80 list-disc pl-6 space-y-2">
+              <li><strong>Droit d'accès :</strong> connaître les données personnelles que nous possédons sur vous</li>
+              <li><strong>Droit de rectification</strong></li>
+              <li><strong>Droit à la suppression</strong> (droit à l'oubli)</li>
+              <li><strong>Droit d'opposition</strong></li>
+              <li><strong>Droit de limitation</strong></li>
+              <li><strong>Droit à la portabilité</strong> de vos données</li>
+            </ul>
+            <p class="text-foreground/80 mt-4">
+              Pour exercer vos droits, contactez-nous à : <strong>avh-garden@hotmail.com</strong>
+            </p>
+            <p class="text-foreground/80 mt-3">
+              Nous répondrons dans un délai maximum de 30 jours.
+            </p>
+          </section>
+
+          <section class="mb-8">
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Sécurité des données
+            </h2>
+            <p class="text-foreground/80 mb-3">
+              Nous mettons en place différentes mesures pour protéger vos données :
+            </p>
+            <ul class="text-foreground/80 list-disc pl-6 space-y-2">
+              <li>certificat SSL (HTTPS)</li>
+              <li>mises à jour régulières de sécurité</li>
+              <li>accès limité à l'administration</li>
+              <li>protection anti-spam pour les formulaires</li>
+              <li>hébergeur sécurisé basé en Europe (o2switch)</li>
             </ul>
           </section>
 
           <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              6. Analyse d'audience avec Matomo
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Transmission de vos données
             </h2>
-            <p class="text-foreground/80 dark:text-white/80 mb-4">
-              Ce site utilise <strong>Matomo</strong>, un outil d'analyse d'audience
-              respectueux de la vie privée. Les caractéristiques principales :
-            </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li>Configuré <strong>sans cookies publicitaires</strong></li>
-              <li><strong>Anonymisation des adresses IP</strong> activée</li>
-              <li>Données collectées <strong>uniquement pour mesurer l'audience</strong> du site</li>
-              <li><strong>Aucune utilisation à des fins commerciales</strong></li>
-              <li>Données hébergées en conformité avec le RGPD</li>
-              <li>Pas de partage avec des tiers</li>
-            </ul>
-            <p class="text-foreground/80 dark:text-white/80 mt-4">
-              Les données collectées par Matomo incluent : pages visitées, durée de
-              visite, type d'appareil, navigateur utilisé, provenance géographique
-              approximative (pays/région).
-            </p>
-          </section>
-
-          <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              7. Durée de conservation
-            </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Vos données personnelles sont conservées pendant :
-            </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li><strong>Données de contact</strong> : 3 ans à compter du dernier contact</li>
-              <li><strong>Données de navigation (Matomo)</strong> : 13 mois maximum</li>
-              <li><strong>Obligations légales</strong> : durée imposée par la loi belge</li>
-            </ul>
-          </section>
-
-          <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              8. Partage des données
-            </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Vos données personnelles ne sont <strong>jamais vendues</strong> à des
-              tiers. Elles peuvent être partagées uniquement avec :
-            </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li>Notre hébergeur web (dans le cadre de la fourniture du service)</li>
-              <li>Prestataires techniques sous contrat de confidentialité</li>
-              <li>Autorités compétentes en cas d'obligation légale</li>
-            </ul>
-          </section>
-
-          <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              9. Transferts de données hors UE
-            </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Vos données personnelles sont hébergées et traitées au sein de l'Union
-              Européenne. Aucun transfert vers des pays tiers n'est effectué sans
-              garanties appropriées conformément au RGPD.
-            </p>
-          </section>
-
-          <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              10. Vos droits
-            </h2>
-            <p class="text-foreground/80 dark:text-white/80 mb-4">
-              Conformément au RGPD, vous disposez des droits suivants :
-            </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li><strong>Droit d'accès</strong> : obtenir une copie de vos données</li>
-              <li><strong>Droit de rectification</strong> : corriger vos données inexactes</li>
-              <li><strong>Droit à l'effacement</strong> : supprimer vos données (« droit à l'oubli »)</li>
-              <li><strong>Droit à la limitation</strong> : limiter le traitement de vos données</li>
-              <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
-              <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
-              <li><strong>Droit de retirer votre consentement</strong> : à tout moment</li>
-            </ul>
-            <p class="text-foreground/80 dark:text-white/80 mt-4">
-              Pour exercer ces droits, contactez-nous à l'adresse :
-              <strong>nicolasdeza@hotmail.be</strong>
-            </p>
-          </section>
-
-          <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              11. Réclamation
-            </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Si vous estimez que vos droits ne sont pas respectés, vous pouvez
-              introduire une réclamation auprès de l'autorité de protection des
-              données belge :
-            </p>
-            <p class="text-foreground/80 dark:text-white/80 mt-4">
-              <strong>Autorité de protection des données (APD)</strong><br>
-              Rue de la Presse 35, 1000 Bruxelles<br>
-              Tél. : +32 (0)2 274 48 00<br>
-              Email : contact@apd-gba.be<br>
-              Site web : <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">www.autoriteprotectiondonnees.be</a>
-            </p>
-          </section>
-
-          <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              12. Sécurité
-            </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Nous mettons en œuvre des mesures techniques et organisationnelles
-              appropriées pour protéger vos données personnelles contre la
-              destruction, la perte, l'altération, la divulgation ou l'accès non
-              autorisé. Cela inclut notamment :
-            </p>
-            <ul class="text-foreground/80 dark:text-white/80 list-disc pl-6 space-y-2">
-              <li>Chiffrement des données en transit (HTTPS)</li>
-              <li>Accès limité aux données personnelles</li>
-              <li>Mises à jour régulières de sécurité</li>
-            </ul>
-          </section>
-
-          <section class="mb-8">
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              13. Cookies
-            </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              En dehors de Matomo (qui fonctionne sans cookies publicitaires), ce
-              site peut utiliser des cookies techniques essentiels au fonctionnement
-              du site. Vous pouvez configurer votre navigateur pour refuser les
-              cookies, mais certaines fonctionnalités du site pourraient être
-              limitées.
+            <p class="text-foreground/80">
+              Les données de formulaire peuvent être envoyées par e-mail à l'adresse de contact fournie par AVH Garden.
+              Certaines données techniques (logs serveurs, adresses IP) sont traitées par notre hébergeur pour assurer la sécurité du site.
             </p>
           </section>
 
           <section>
-            <h2 class="text-2xl font-bold text-foreground dark:text-white mb-4">
-              14. Modifications de la politique
+            <h2 class="text-2xl font-bold text-foreground mb-4">
+              Contact
             </h2>
-            <p class="text-foreground/80 dark:text-white/80">
-              Nous nous réservons le droit de modifier cette politique de
-              confidentialité à tout moment. Les modifications seront publiées sur
-              cette page avec une date de mise à jour actualisée. Nous vous
-              encourageons à consulter régulièrement cette page.
+            <p class="text-foreground/80">
+              Pour toute question relative à la protection de vos données personnelles :
+            </p>
+            <p class="text-foreground/80 mt-4">
+              <strong>avh-garden@hotmail.com</strong><br>
+              Avenue de ninove 5<br>
+              5580 Rochefort<br>
+              0494 80 15 96
             </p>
           </section>
         </div>
@@ -263,7 +198,7 @@ useSeoMeta({
         <div class="flex justify-center pt-8">
           <NuxtLink
             to="/"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary hover:bg-primary-hover text-white font-medium transition-colors"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary hover:bg-primary-hover text-white font-medium transition-colors hover:scale-105"
           >
             <span aria-hidden="true">←</span>
             Retour à l'accueil

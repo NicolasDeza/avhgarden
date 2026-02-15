@@ -11,9 +11,33 @@ if (!project) {
   throw createError({ statusCode: 404 })
 }
 
+const canonical = useCanonical()
+
+useHead(() => ({
+  link: [
+    {
+      rel: "canonical",
+      href: canonical.value,
+    },
+  ],
+}))
+
 useSeoMeta({
-  title: project.title + " – AVH Garden",
-  description: project.description,
+  title: project.title  ,
+  description: project.description + "Découvrez cette réalisation d’aménagement de terrasse en pavage à Liège. Projet conçu et réalisé par AVH Garden en Brabant Wallon.",
+
+  robots: "index, follow",
+
+  ogTitle: project.title + " – AVH Garden",
+  ogDescription: project.description,
+  ogImage: project.cover ? `https://www.avh-garden.be${project.cover}` : "https://www.avh-garden.be/og-avhgarden.jpg",
+  ogUrl: canonical,
+  ogType: "article",
+
+  twitterCard: "summary_large_image",
+  twitterTitle: project.title + " – AVH Garden",
+  twitterDescription: project.description,
+  twitterImage: project.cover ? `https://www.avh-garden.be${project.cover}` : "https://www.avh-garden.be/og-avhgarden.jpg",
 })
 
 // Lightbox
