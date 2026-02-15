@@ -5,8 +5,12 @@
   >
     <NuxtImg
       src="/images/hero/hero.jpg"
-      alt=""
+      alt="Professionnel réalisant des travaux de rénovation extérieure, aménagement paysager et pavage"
       role="presentation"
+      width="1920"
+      height="1080"
+      format="webp"
+      quality="80"
       class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
       loading="eager"
       aria-hidden="true"

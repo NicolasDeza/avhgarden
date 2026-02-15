@@ -31,6 +31,7 @@ import {
           <div class="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 shadow-2xl">
             <NuxtImg 
               src="/images/services/exterieur.jpg" 
+              alt="Aménagements extérieurs : pavage, terrassement, allées et travaux de drainage"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold text-gray-900 uppercase tracking-widest">
@@ -64,6 +65,7 @@ import {
           <div class="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 shadow-2xl">
             <NuxtImg 
               src="/images/services/interieur.jpg" 
+              alt="Rénovation intérieure : carrelage, salles de bain, plomberie et aménagements"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-sm font-bold text-gray-900 uppercase tracking-widest">

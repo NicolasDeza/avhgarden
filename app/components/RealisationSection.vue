@@ -21,6 +21,7 @@
         <article class="md:col-span-7 md:row-span-2 group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm border border-slate-100">
           <NuxtImg 
             src="/images/realisations/terrasse.jpg" 
+            alt="Belle terrasse moderne avec pavage en pierre, aménagement paysager et mobilier d'extérieur"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-8">
@@ -32,6 +33,7 @@
         <article class="md:col-span-5 md:row-span-1 group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm border border-slate-100">
           <NuxtImg 
             src="/images/realisations/grenier.jpg" 
+            alt="Rénovation complète de combles transformés en espace habitable moderne et lumineux"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-6">
@@ -43,6 +45,7 @@
         <article class="md:col-span-5 md:row-span-1 group relative overflow-hidden rounded-3xl bg-slate-100 shadow-sm border border-slate-100">
           <NuxtImg 
             src="/images/realisations/amenagement.jpg" 
+            alt="Aménagement paysager harmonieux avec espaces verts et jardin bien entretenu"
             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-6">
