@@ -112,6 +112,23 @@ onBeforeUnmount(() => {
                 </div>
               </a>
 
+              <a
+                href="tel:+32494414994"
+                class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 group"
+              >
+                <div class="p-3 rounded-lg bg-primary/20 group-hover:bg-primary/30 transition-colors">
+                  <Phone :size="22" class="text-primary" />
+                </div>
+                <div>
+                  <p class="text-xs font-medium text-white/50 uppercase tracking-wide mb-1">
+                    Téléphone
+                  </p>
+                  <p class="text-white font-semibold group-hover:text-primary transition-colors">
+                    +32 494 41 49 94
+                  </p>
+                </div>
+              </a>
+
               <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
                 <div class="p-3 rounded-lg bg-primary/20">
                   <MapPin :size="22" class="text-primary" />

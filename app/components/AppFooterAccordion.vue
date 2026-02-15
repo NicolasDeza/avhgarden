@@ -110,7 +110,7 @@ const handleLogoClick = async () => {
                 <NuxtLink to="/realisations" class="text-white/60 hover:text-primary-hover transition-colors">Réalisations</NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/services" class="text-white/60 hover:text-primary-hover transition-colors">Services</NuxtLink>
+                <NuxtLink to="/#services" class="text-white/60 hover:text-primary-hover transition-colors">Services</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="/contact" class="text-white/60 hover:text-primary-hover transition-colors">Contact</NuxtLink>
