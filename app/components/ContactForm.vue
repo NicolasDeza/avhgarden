@@ -121,7 +121,7 @@ onBeforeUnmount(() => {
                     Zone d'intervention
                   </p>
                   <p class="text-white font-semibold">
-                    Brabant Wallon & Namur
+                    Brabant Wallon et Province de Namur
                   </p>
                 </div>
               </div>
