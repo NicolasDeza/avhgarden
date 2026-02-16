@@ -1,4 +1,6 @@
 <script setup>
+defineOptions({ inheritAttrs: false })
+
 defineProps({
   title: { type: String, required: true },
   description: { type: String, required: true },
@@ -8,9 +10,10 @@ defineProps({
 
 <template>
   <div
-    class="group relative flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl
-           transition-all duration-500 hover:-translate-y-2
-           bg-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl overflow-hidden"
+    :class="[
+      'group relative flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl hover:-translate-y-2 bg-white border border-slate-200 hover:border-primary/30 shadow-lg hover:shadow-2xl overflow-hidden',
+      $attrs.class
+    ]"
   >
     <!-- Effet de fond subtil au hover -->
     <div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

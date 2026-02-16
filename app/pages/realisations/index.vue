@@ -49,13 +49,13 @@ useSeoMeta({
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
 
       <div class="relative z-10 text-center px-6 max-w-4xl">
-        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-black tracking-[0.3em] uppercase text-primary bg-[[#1E1E1E]] backdrop-blur-md rounded-full">
+        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-black tracking-[0.3em] uppercase text-primary bg-[[#1E1E1E]] backdrop-blur-md rounded-full hero-anim">
           Portfolio
         </span>
-        <h1 class="text-4xl sm:text-6xl font-black text-white mb-6 tracking-tight">
+        <h1 class="text-4xl sm:text-6xl font-black text-white mb-6 tracking-tight hero-anim-delay-1">
           Nos réalisations
         </h1>
-        <p class="text-white/90 max-w-xl mx-auto text-base sm:text-xl font-medium leading-relaxed">
+        <p class="text-white/90 max-w-xl mx-auto text-base sm:text-xl font-medium leading-relaxed hero-anim-delay-2">
           Découvrez l'excellence de notre savoir-faire à travers nos projets de terrassement et rénovation.
         </p>
       </div>

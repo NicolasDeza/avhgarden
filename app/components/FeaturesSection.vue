@@ -1,9 +1,29 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import {
   Shield,
   Award,
   ThumbsUp,
 } from "lucide-vue-next";
+
+const sectionRef = ref(null)
+const isVisible = ref(false)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        isVisible.value = true
+        observer.disconnect()
+      }
+    },
+    { threshold: 0.15 }
+  )
+  
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+})
 
 const features = [
   {
@@ -28,7 +48,7 @@ const features = [
 </script>
 
 <template>
-  <section class="w-full bg-slate-50 py-16 sm:py-24" aria-label="Pourquoi nous choisir">
+  <section ref="sectionRef" class="w-full bg-slate-50 py-16 sm:py-24" aria-label="Pourquoi nous choisir">
     <div class="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
       <!-- Titre -->
       <header class="mx-auto max-w-3xl text-center mb-20">
@@ -49,6 +69,7 @@ const features = [
           :title="feature.title"
           :description="feature.description"
           :icon="feature.icon"
+          :class="['feature-card', { 'visible': isVisible }]"
         />
       </div>
     </div>

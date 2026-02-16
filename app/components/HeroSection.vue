@@ -11,8 +11,6 @@
       aria-hidden="true"
       fetchpriority="high"
       loading="eager"
-      width="1920"
-      height="1080"
       format="webp"
       quality="80"
       class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"

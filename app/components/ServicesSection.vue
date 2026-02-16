@@ -9,6 +9,25 @@ import {
   Home, 
   Pipette 
 } from "lucide-vue-next"
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const elements = document.querySelectorAll('.service-anim')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.2 }
+  )
+
+  elements.forEach(el => observer.observe(el))
+})
 </script>
 
 <template>
@@ -27,7 +46,7 @@ import {
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
         
-        <div class="group">
+        <div class="group service-anim">
           <div class="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 shadow-2xl">
             <NuxtImg 
               src="/images/services/exterieur.jpg" 
@@ -61,7 +80,7 @@ import {
           </ul>
         </div>
 
-        <div class="group">
+        <div class="group service-anim">
           <div class="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8 shadow-2xl">
             <NuxtImg 
               src="/images/services/interieur.jpg" 
