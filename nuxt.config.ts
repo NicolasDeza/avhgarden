@@ -56,25 +56,6 @@ export default defineNuxtConfig({
         { name: "author", content: "AVH Garden" },
       ],
 
-      link: [
-        {
-          rel: "icon",
-          type: "image/png",
-          sizes: "48x48",
-          href: "/nuxt-logo.png",
-        },
-        {
-          rel: "icon",
-          type: "image/x-icon",
-          href: "/favicon.ico",
-        },
-        {
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/nuxt-logo.png",
-        },
-      ],
-
       script: [
         {
           src: "https://challenges.cloudflare.com/turnstile/v0/api.js",
