@@ -25,3 +25,28 @@
 .page-leave-to {
   opacity: 0;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim {
+  animation: fadeInUp 0.9s ease-out forwards;
+}
+
+.hero-anim-delay-1 {
+  animation: fadeInUp 0.9s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.hero-anim-delay-2 {
+  animation: fadeInUp 0.9s ease-out 0.4s forwards;
+  opacity: 0;
+}
