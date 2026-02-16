@@ -111,7 +111,7 @@ v-for="item in [
       <div class="flex items-center gap-5">
         <NuxtLink
           to="/contact"
-          class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary px-8 py-2.5 text-sm font-bold text-white  hover:bg-primary-hover hover:scale-105 transition-all duration-300"
+          class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary px-8 py-2.5 text-sm font-bold text-white  hover:bg-primary-hover hover:scale-105 transition-all duration-300"
         >
           Devis gratuit
         </NuxtLink>
