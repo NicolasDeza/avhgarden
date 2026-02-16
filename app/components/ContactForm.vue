@@ -321,13 +321,13 @@ onBeforeUnmount(() => {
           <button
             type="submit"
             :disabled="loading"
-            class="group relative w-full px-6 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-3 overflow-hidden"
+            class="group relative w-full px-6 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all  flex items-center justify-center gap-3 overflow-hidden"
           >
             <span class="relative z-10">
               {{ loading ? "Envoi en cours..." : "Envoyer le message" }}
             </span>
             <Send v-if="!loading" :size="20" class="relative z-10 group-hover:translate-x-0.5 transition-transform" />
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+            
           </button>
 
           <p
