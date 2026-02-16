@@ -1,5 +1,26 @@
 <script setup>
-// Tu peux importer des icônes ici si nécessaire
+import { ref, onMounted } from 'vue'
+
+const isVisible = ref(false)
+const sectionRef = ref(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        isVisible.value = true
+        observer.disconnect()
+      }
+    },
+    {
+      threshold: 0.2
+    }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+})
 </script>
 
 <template>
@@ -13,30 +34,38 @@
       />
       <div class="absolute inset-0 bg-gradient-to-r from-[#1E1E1E] via-transparent to-transparent hidden lg:block w-1/3"/>
       <div class="absolute inset-0 bg-gradient-to-t from-[#1E1E1E] via-transparent to-transparent lg:hidden h-1/2 bottom-0"/>
-      
     </div>
 
-    <div class="relative flex items-center justify-center p-10 sm:p-16">
-      <div class="relative z-10 max-w-xl w-full">
+    <div 
+      ref="sectionRef"
+      class="relative flex items-center justify-center p-10 sm:p-16"
+    >
+      <div 
+        class="relative z-10 max-w-xl w-full transform transition-all duration-1000 ease-out"
+        :class="isVisible ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'"
+      >
         
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"/>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"/>
           </span>
-          <span class="text-primary font-bold text-[10px] uppercase tracking-widest">TVA 0776.249.824  actif depuis 1997</span>
+          <span class="text-primary font-bold text-[10px] uppercase tracking-widest">
+            TVA 0776.249.824 actif depuis 1997
+          </span>
         </div>
         
-        <h2 class="text-4xl sm:text-4xl font-black text-white leading-[1.05] tracking-tighter mb-8">
-          La qualité au service de votre <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">habitat.</span>
+        <h2 class="text-4xl font-black text-white leading-[1.05] tracking-tighter mb-8">
+          La qualité au service de votre 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">
+            habitat.
+          </span>
         </h2>
         
-        <p class="text-slate-400 text-lg leading-relaxed mb-10 font-light ">
-          Nous ne nous contentons pas de construire, nous façonnons des espaces de vie durables. Notre expertise certifiée est le gage d'une réalisation sans compromis.
+        <p class="text-slate-400 text-lg leading-relaxed mb-10 font-light">
+          Nous ne nous contentons pas de construire, nous façonnons des espaces de vie durables. 
+          Notre expertise certifiée est le gage d'une réalisation sans compromis.
         </p>
-
-        
-       
 
         <div class="flex flex-col sm:flex-row gap-5 items-start sm:items-center">
           <NuxtLink 
@@ -45,14 +74,13 @@
           >
             Voir nos travaux
           </NuxtLink>
-          
         </div>
-      
 
+      </div>
     </div>
-  </div>
   </section>
 </template>
+
 
 <style scoped>
 
@@ -64,7 +92,7 @@
   position: absolute;
   inset: 0;
   opacity: 0.05;
-  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+
   pointer-events: none;
 }
 </style>
