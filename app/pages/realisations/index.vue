@@ -88,6 +88,8 @@ useSeoMeta({
             <NuxtImg
               :src="project.cover"
               :alt="project.title"
+              fetchpriority="high"
+              loading="eager"
               format="webp"
               quality="85"
               width="800"

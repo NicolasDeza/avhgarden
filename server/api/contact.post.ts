@@ -69,7 +69,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     await transporter.sendMail({
-      from: `"Portfolio Nicolas" <${config.mail.from}>`,
+      from: `"AVH Garden" <${config.mail.from}>`,
       to: config.mail.to,
       replyTo: email,
       subject: `Nouveau message de ${name}`,
