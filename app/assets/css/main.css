@@ -107,3 +107,64 @@
 .feature-card:nth-child(3) {
   transition-delay: 0.5s;
 }
+
+/* Animation Welcome Section - Cascade élégante */
+
+.welcome-anim-1 {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.welcome-anim-1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.welcome-anim-2 {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0.15s;
+}
+
+.welcome-anim-2.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.welcome-anim-3 {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0.3s;
+}
+
+.welcome-anim-3.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.welcome-anim-4 {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0.45s;
+}
+
+.welcome-anim-4.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.welcome-anim-5 {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: 0.6s;
+}
+
+.welcome-anim-5.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
