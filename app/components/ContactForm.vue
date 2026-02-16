@@ -198,6 +198,7 @@ onBeforeUnmount(() => {
               id="name"
               v-model="form.name"
               type="text"
+              name="name"
               placeholder="John Doe"
               autocomplete="name"
               required
@@ -229,6 +230,7 @@ onBeforeUnmount(() => {
               id="email"
               v-model="form.email"
               type="email"
+              name="email"
               placeholder="votre@email.com"
               autocomplete="email"
               required
@@ -259,6 +261,7 @@ onBeforeUnmount(() => {
               id="phone"
               v-model="form.phone"
               type="tel"
+              name="phone"
               placeholder="+32 475 12 34 56"
               autocomplete="tel"
               :aria-invalid="!!errors.phone"
@@ -289,6 +292,7 @@ onBeforeUnmount(() => {
               id="message"
               v-model="form.message"
               rows="5"
+              name="message"
               placeholder="Décrivez votre projet..."
               autocomplete="off"
               required
