@@ -32,10 +32,6 @@ export default defineNuxtConfig({
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://www.avh-garden.be",
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
-
-      // 🔥 Matomo (Analytics RGPD)
-      matomoUrl: process.env.NUXT_PUBLIC_MATOMO_URL || "",
-      matomoSiteId: process.env.NUXT_PUBLIC_MATOMO_SITE_ID || "1",
     },
   },
 
