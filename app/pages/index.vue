@@ -18,13 +18,16 @@ useHead(() => ({
         "@type": "LocalBusiness",
         name: "AVH Garden",
         url: "https://avh-garden.be",
-        telephone: "+32494414994",
+        telephone: "+32494801596",
+        email: "avh-garden@hotmail.com",
         priceRange: "€€",
         description:
           "Entreprise spécialisée en rénovation extérieure et intérieure en Belgique.",
+        areaServed: ["Brabant Wallon", "Province de Namur"],
         address: {
           "@type": "PostalAddress",
           addressCountry: "BE",
+          addressRegion: "Wallonie",
         },
       }),
     },
@@ -33,9 +36,9 @@ useHead(() => ({
 
 useSeoMeta({
   title:
-    "Entreprise d'aménagement extérieur et intérieur en Belgique",
+    "Aménagement extérieur & intérieur en Belgique",
   description:
-     "AVH Garden est spécialisée en aménagement extérieur, pavage et terrasses en Brabant Wallon et Province de Namur. Nous réalisons vos projets avec soin et professionnalisme. Devis gratuit.",
+     "Spécialiste en aménagement extérieur, pavage et terrasses et intérieur en Brabant Wallon et Namur. AVH Garden transforme vos projets. Devis gratuit.",
 
   robots: "index, follow",
 
