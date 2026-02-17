@@ -22,7 +22,7 @@ useSeoMeta({
   ogTitle: "Nos réalisations – AVH Garden | Projets avant & après",
   ogDescription:
     "Parcourez nos chantiers réalisés : terrassement, pavage, rénovation intérieure et aménagements extérieurs en Belgique. Photos avant/après de nos projets.",
-  ogImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  ogImage: "https://avh-garden.be/og-avhgarden.jpg",
   ogUrl: canonical,
   ogType: "website",
 
@@ -30,7 +30,7 @@ useSeoMeta({
   twitterTitle: "Réalisations AVH Garden – Avant & Après",
   twitterDescription:
     "Découvrez nos projets d'aménagement extérieur et rénovation intérieure en Brabant Wallon et Namur. Photos avant/après.",
-  twitterImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  twitterImage: "https://avh-garden.be/og-avhgarden.jpg",
 })
 </script>
 

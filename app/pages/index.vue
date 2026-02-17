@@ -46,7 +46,7 @@ useSeoMeta({
       "AVH Garden – Aménagement extérieur et intérieur en Belgique",
   ogDescription:
       "Spécialiste en aménagement extérieur, pavage et terrasses en Brabant Wallon et Namur. AVH Garden transforme vos extérieurs avec précision et expertise. Devis gratuit.",
-  ogImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  ogImage: "https://avh-garden.be/og-avhgarden.jpg",
   ogUrl: canonical,
   ogType: "website",
 
@@ -54,7 +54,7 @@ useSeoMeta({
   twitterTitle: "AVH Garden – Entreprise de rénovation",
   twitterDescription:
     "Aménagement extérieur, pavage et terrasses en Brabant Wallon & Namur. AVH Garden réalise vos projets avec précision. Devis gratuit.",
-  twitterImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  twitterImage: "https://wavh-garden.be/og-avhgarden.jpg",
 });
 </script>
 

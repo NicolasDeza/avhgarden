@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 
     // ===== Public (client) =====
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://www.avh-garden.be",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://avh-garden.be",
       turnstileSiteKey: process.env.NUXT_PUBLIC_TURNSTILE_SITE_KEY,
     },
   },

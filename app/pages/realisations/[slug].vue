@@ -30,14 +30,14 @@ useSeoMeta({
 
   ogTitle: project.title + " – AVH Garden",
   ogDescription: project.description,
-  ogImage: project.cover ? `https://www.avh-garden.be${project.cover}` : "https://www.avh-garden.be/og-avhgarden.jpg",
+  ogImage: project.cover ? `https://avh-garden.be${project.cover}` : "https://avh-garden.be/og-avhgarden.jpg",
   ogUrl: canonical,
   ogType: "article",
 
   twitterCard: "summary_large_image",
   twitterTitle: project.title + " – AVH Garden",
   twitterDescription: project.description,
-  twitterImage: project.cover ? `https://www.avh-garden.be${project.cover}` : "https://www.avh-garden.be/og-avhgarden.jpg",
+  twitterImage: project.cover ? `https://avh-garden.be${project.cover}` : "https://avh-garden.be/og-avhgarden.jpg",
 })
 
 // Lightbox

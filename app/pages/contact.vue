@@ -43,7 +43,7 @@ useSeoMeta({
   ogTitle: "Contactez AVH Garden – Devis gratuit",
   ogDescription:
     "Besoin d'un devis pour vos travaux d'aménagement extérieur ou de rénovation ? Contactez AVH Garden, spécialiste en Brabant Wallon et Province de Namur.",
-  ogImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  ogImage: "https://avh-garden.be/og-avhgarden.jpg",
   ogUrl: canonical,
   ogType: "website",
 
@@ -51,7 +51,7 @@ useSeoMeta({
   twitterTitle: "Contact AVH Garden – Devis gratuit",
   twitterDescription:
     "Contactez AVH Garden pour votre projet d'aménagement extérieur ou rénovation intérieure. Devis gratuit sous 48h en Belgique.",
-  twitterImage: "https://www.avh-garden.be/og-avhgarden.jpg",
+  twitterImage: "https://avh-garden.be/og-avhgarden.jpg",
 });
 </script>
 <template>
