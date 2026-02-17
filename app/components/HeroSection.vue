@@ -12,7 +12,7 @@
       fetchpriority="high"
       loading="eager"
       format="webp"
-      quality="80"
+      quality="70"
       class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
     />
 
