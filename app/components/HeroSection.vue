@@ -7,7 +7,8 @@
        <NuxtImg
           src="/images/hero/hero.jpg"
           alt=""
-        
+          width="1600"
+          height="900"
           fetchpriority="high"
           loading="eager"
           format="webp"
