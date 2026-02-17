@@ -7,6 +7,7 @@
        <NuxtImg
           src="/images/hero/hero.jpg"
           alt=""
+          sizes="(max-width: 768px) 100vw, 1600px"
           width="1600"
           height="900"
           fetchpriority="high"
@@ -14,7 +15,7 @@
           format="webp"
           quality="75"
           preload
-          class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+          class="absolute inset-0 w-full h-full object-cover"
        />
 
 
