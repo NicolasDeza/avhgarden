@@ -195,7 +195,7 @@ const handleLogoClick = async () => {
 
           <p>
             Site réalisé par 
-            <a href="https://nicolasdeza.com" target="_blank" class="text-primary underline hover:no-underline">Nicolas Deza</a>
+            <a href="https://nicolasdeza.com" target="_blank" rel="noopener noreferrer" class="text-primary underline hover:no-underline">Nicolas Deza</a>
           </p>
         </div>
       </div>
