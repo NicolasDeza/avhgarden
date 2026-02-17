@@ -54,7 +54,7 @@ useSeoMeta({
   twitterTitle: "AVH Garden – Entreprise de rénovation",
   twitterDescription:
     "Aménagement extérieur, pavage et terrasses en Brabant Wallon & Namur. AVH Garden réalise vos projets avec précision. Devis gratuit.",
-  twitterImage: "https://wavh-garden.be/og-avhgarden.jpg",
+  twitterImage: "https://avh-garden.be/og-avhgarden.jpg",
 });
 </script>
 
