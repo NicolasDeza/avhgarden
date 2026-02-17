@@ -4,17 +4,19 @@
     aria-label="Section d'accueil - Présentation des services de rénovation"
   >
     <!-- Image -->
-    <NuxtImg
-      src="/images/hero/hero.jpg"
-      alt="Professionnel réalisant des travaux de rénovation extérieure, aménagement paysager et pavage"
-      role="presentation"
-      aria-hidden="true"
-      fetchpriority="high"
-      loading="eager"
-      format="webp"
-      quality="70"
-      class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-    />
+       <NuxtImg
+          src="/images/hero/hero.jpg"
+          alt=""
+          width="1600"
+          height="900"
+          fetchpriority="high"
+          loading="eager"
+          format="webp"
+          quality="75"
+          preload
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+       />
+
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/40" aria-hidden="true" />
