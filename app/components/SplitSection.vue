@@ -30,10 +30,9 @@ onMounted(() => {
       <NuxtImg 
         src="/images/split/section-1.jpg" 
         alt="Artisan BTP en action"
-        class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+        class="absolute inset-0 w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-gradient-to-r from-[#1E1E1E] via-transparent to-transparent hidden lg:block w-1/3"/>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#1E1E1E] via-transparent to-transparent lg:hidden h-1/2 bottom-0"/>
+    
     </div>
 
     <div 
