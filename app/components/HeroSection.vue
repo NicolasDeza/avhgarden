@@ -37,7 +37,7 @@
 
       <!-- Bloc texte + CTA -->
       <div 
-        class="max-w-2xl mx-auto backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl hero-anim-delay-2"
+        class="max-w-2xl mx-auto backdrop-blur-lg bg-white/10 border border-white/15 rounded-3xl p-8 shadow-2xl hero-anim-delay-2"
       >
         <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
           Travaux <strong class="text-white">intérieurs</strong> et 
